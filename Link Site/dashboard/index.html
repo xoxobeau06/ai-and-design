@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozy Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+    <script>
+        // Apply theme immediately to prevent flashing
+        (function () {
+            var theme = localStorage.getItem('dashboardTheme') || 'system';
+            if (theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark-theme');
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="clouds"></div>
+    <header>
+        <div class="header-container">
+            <h1 id="greeting">Good morning.</h1>
+            <div class="header-right">
+                <!-- Panel Switcher -->
+                <nav class="panel-switcher" id="panel-switcher" aria-label="Dashboard Panels">
+                    <!-- Panel buttons injected here -->
+                </nav>
+                <div class="actions">
+                    <select id="theme-select" class="theme-select" aria-label="Select Theme">
+                        <option value="system">Auto</option>
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                    </select>
+                    <button id="lock-btn" class="btn btn-icon" title="Lock/Unlock Edit Mode"
+                        aria-label="Toggle Lock">🔒</button>
+                    <button id="add-panel-btn" class="btn btn-icon" title="Add new panel"
+                        aria-label="Add Panel">+</button>
+                    <button id="add-category-btn" class="btn btn-secondary">✿ Add Category</button>
+                    <button id="add-link-btn" class="btn btn-primary">✧ Add Item</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard" id="dashboard">
+        <!-- Categories and links will be rendered here based on active panel -->
+    </main>
+
+    <!-- Modal for Adding/Editing Links -->
+    <div id="link-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="link-modal-title">Add new link or task</h2>
+                <button class="close-btn" id="close-link-modal">&times;</button>
+            </div>
+            <form id="link-form">
+                <input type="hidden" id="link-id">
+                <div class="form-group">
+                    <label for="link-name">Name</label>
+                    <input type="text" id="link-name" required placeholder="e.g. Recipe Book, Final Essay">
+                </div>
+                <div class="form-group">
+                    <label for="link-url">URL (optional)</label>
+                    <input type="url" id="link-url" placeholder="e.g. https://canvas.instructure.com/...">
+                </div>
+                <div class="form-group">
+                    <label for="link-desc">Description or Notes (optional)</label>
+                    <input type="text" id="link-desc" placeholder="e.g. Read chapters 4-5 first">
+                </div>
+                <div class="form-group">
+                    <label for="link-dueDate">Due Date (optional)</label>
+                    <input type="text" id="link-dueDate" placeholder="e.g. Tomorrow at 11:59pm">
+                </div>
+                <div class="form-group">
+                    <label for="link-category">Category</label>
+                    <select id="link-category" required>
+                        <!-- Categories populated dynamically -->
+                    </select>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-text" id="cancel-link-btn">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save item</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal for Adding Categories -->
+    <div id="category-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>New Category</h2>
+                <button class="close-btn" id="close-category-modal">&times;</button>
+            </div>
+            <form id="category-form">
+                <div class="form-group">
+                    <label for="category-name">Title</label>
+                    <input type="text" id="category-name" required placeholder="e.g. Inspirations, Music">
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-text" id="cancel-category-btn">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Create</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal for Adding Panels -->
+    <div id="panel-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>New Panel</h2>
+                <button class="close-btn" id="close-panel-modal">&times;</button>
+            </div>
+            <form id="panel-form">
+                <div class="form-group">
+                    <label for="panel-name">Panel Name</label>
+                    <input type="text" id="panel-name" required placeholder="e.g. Hobbies, Academia">
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-text" id="cancel-panel-btn">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Create Panel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal for Login -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Unlock Edit Mode</h2>
+                <button class="close-btn" id="close-login-modal">&times;</button>
+            </div>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required placeholder="Enter password (hint: 'password')">
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-text" id="cancel-login-btn">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Unlock</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

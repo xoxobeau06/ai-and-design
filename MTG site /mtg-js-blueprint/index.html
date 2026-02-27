@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commander JS | The Magic of JavaScript</title>
+
+    <!-- Elegant Serifs for headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress"></div>
+
+    <div class="blueprint-container">
+
+        <!-- 1. Hero (full-bleed, centered) -->
+        <section class="section-hero" id="hero-section">
+
+            <div class="hero-bg parallax-bg" style="background-image: url('assets/hero.png');"></div>
+            <div class="hero-overlay"></div>
+
+            <div class="parallax-layer layer-back">
+                <div class="mana-symbol green">G</div>
+                <div class="mana-symbol red">R</div>
+            </div>
+
+            <div class="parallax-layer layer-mid">
+                <div class="mana-symbol blue">U</div>
+                <div class="mana-symbol black">B</div>
+                <div class="mana-symbol white">W</div>
+            </div>
+
+            <div class="hero-content parallax-layer layer-front">
+                <h1 class="hero-title">The Commander Metaphor:<br><span class="text-glow">Mastering JavaScript</span>
+                </h1>
+                <p class="hero-subtitle">You are the player. The DOM is the battlefield. The Call Stack is the Stack.
+                </p>
+                <div class="scroll-indicator">
+                    <span>Descend into the Library</span>
+                    <div class="arrow-down"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Contained card layout -->
+        <section class="section-cards" id="cards-section">
+            <div class="section-header fade-up">
+                <h2>The Library, The Hand, and The Board</h2>
+                <p class="section-desc">Understand your components through the lens of a spellcaster.</p>
+            </div>
+
+            <div class="card-container">
+                <!-- Card 1 -->
+                <div class="mtg-card js-card" data-tilt>
+                    <div class="card-inner">
+                        <div class="card-header border-u">
+                            <span class="card-title">Fetch API</span>
+                            <span class="mana-cost u">U</span>
+                        </div>
+                        <div class="card-art" style="background-image: url('assets/card-u.png');"></div>
+                        <div class="card-type">Sorcery — Network</div>
+                        <div class="card-text">
+                            <p>Draw data from a remote endpoint. Tap one Promise.</p>
+                            <p class="flavor-text">"The knowledge of the cosmos, async and awaiting."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="mtg-card js-card" data-tilt>
+                    <div class="card-inner">
+                        <div class="card-header border-r">
+                            <span class="card-title">Event Listener</span>
+                            <span class="mana-cost r">R</span>
+                        </div>
+                        <div class="card-art fire-art"></div>
+                        <div class="card-type">Enchantment — Aura</div>
+                        <div class="card-text">
+                            <p>Enchant target DOM Node. Whenever an event occurs, trigger your callback function.</p>
+                            <p class="flavor-text">"Lightning awaits the spark."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="mtg-card js-card" data-tilt>
+                    <div class="card-inner">
+                        <div class="card-header border-b">
+                            <span class="card-title">Closure</span>
+                            <span class="mana-cost b">B</span>
+                        </div>
+                        <div class="card-art void-art"></div>
+                        <div class="card-type">Instant — Scope</div>
+                        <div class="card-text">
+                            <p>Retain access to lexical scope, even when the outer function has returned.</p>
+                            <p class="flavor-text">"Some secrets can never be forgotten."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Text-heavy narrative -->
+        <section class="section-narrative" id="narrative-section">
+            <div class="narrative-wrapper">
+                <div class="narrative-text" id="scrub-container">
+                    <h2>The Call Stack Resolves</h2>
+                    <p class="scrub-text js-scrub">In Magic, spells resolve in reverse order—last in, first out. This is
+                        identical to the JavaScript Call Stack.</p>
+                    <p class="scrub-text js-scrub">When you invoke a function, it gets pushed onto the Stack. If that
+                        function calls another, the new function is pushed on top. Nothing underneath can resolve until
+                        the topmost spell leaves the stack.</p>
+                    <p class="scrub-text js-scrub">When an error occurs, you trace the stack trace downward—just as you
+                        trace a complicated counter-war on the battlefield.</p>
+                </div>
+                <div class="narrative-aside">
+                    <div class="stack-visualizer">
+                        <div class="stack-slot empty"></div>
+                        <div class="stack-slot empty"></div>
+                        <div class="stack-slot stack-block js-stack-3">Function C() <span class="badge">Resolving</span>
+                        </div>
+                        <div class="stack-slot stack-block js-stack-2">Function B()</div>
+                        <div class="stack-slot stack-block js-stack-1">Function A()</div>
+                        <div class="stack-base">The Call Stack</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Split comparison layout -->
+        <section class="section-split" id="split-section">
+            <div class="split-left pinned-zone">
+                <h2>Synchronous vs.<br><span class="text-glow">Asynchronous Play</span></h2>
+                <div class="mana-divider">
+                    <span class="u">●</span> <span class="r">●</span>
+                </div>
+                <p>Understanding the difference between Sorcery speed and Instant speed in the Event Loop.</p>
+
+                <div class="code-block glass">
+                    <div class="code-header">event_loop.js</div>
+                    <pre><code>console.log("Draw Step"); 
+<span class="comment">// Sync: Blocks main thread</span>
+
+setTimeout(() => {
+    console.log("Resolve Instant");
+}, 0); 
+<span class="comment">// Async: Goes to Macro Queue</span>
+
+Promise.resolve().then(() => {
+    console.log("Resolve Ability");
+}); 
+<span class="comment">// Async: Goes to Micro Queue</span></code></pre>
+                </div>
+            </div>
+
+            <div class="split-right scrolling-zone">
+                <div class="comparison-card glass">
+                    <div class="timeline-dot"></div>
+                    <h3>Sorcery Speed: Sync Execution</h3>
+                    <p>The parser reads line by line. The main thread blocks. No other plays can be made until the
+                        execution phase completes.</p>
+                </div>
+                <div class="comparison-card highlight-blue glass float-card">
+                    <div class="timeline-dot blue"></div>
+                    <h3>Instant Speed: Async Microtasks</h3>
+                    <p>Promises and callbacks are sent to the Event Loop queues. The main thread continues, and these
+                        resolve immediately when the stack is empty, jumping ahead of macrotasks.</p>
+                </div>
+                <div class="comparison-card glass">
+                    <div class="timeline-dot"></div>
+                    <h3>The Stack (Event Loop)</h3>
+                    <p>The Event Loop is the referee, checking if the stack is clear to allow the next queue resolution
+                        to fire onto the battlefield.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Interaction-focused layout -->
+        <section class="section-interaction" id="interaction-section">
+            <div class="interaction-wrapper">
+                <div class="section-header text-center fade-up">
+                    <h2>Targeting the DOM (The Battlefield)</h2>
+                    <p>Hover over the permanent nodes. Your cursor enacts localized gravitational magic.</p>
+                </div>
+                <div class="battlefield-grid">
+                    <div class="node-target type-green js-magnetic">
+                        <span class="node-icon">🌲</span>
+                        <span class="node-name">div.forest</span>
+                    </div>
+                    <div class="node-target type-red js-magnetic">
+                        <span class="node-icon">⛰️</span>
+                        <span class="node-name">div.mountain</span>
+                    </div>
+                    <div class="node-target type-blue js-magnetic">
+                        <span class="node-icon">💧</span>
+                        <span class="node-name">div.island</span>
+                    </div>
+                    <div class="node-target type-white js-magnetic">
+                        <span class="node-icon">☀️</span>
+                        <span class="node-name">div.plains</span>
+                    </div>
+                    <div class="node-target type-black js-magnetic">
+                        <span class="node-icon">💀</span>
+                        <span class="node-name">div.swamp</span>
+                    </div>
+                </div>
+                <div class="command-zone">
+                    <button class="magic-btn wide" id="target-all-btn">Execute querySelectorAll()</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Grid-based system layout -->
+        <section class="section-grid" id="grid-section">
+            <div class="section-header fade-up">
+                <h2>The Standard Library (Your Deck)</h2>
+                <p>Native properties and methods available at your command.</p>
+            </div>
+            <div class="bento-grid">
+                <div class="bento-item span-2 glass js-bento highlight-white">
+                    <div class="bento-icon">⚙️</div>
+                    <span class="bento-title">Array.map()</span>
+                    <p>Transforms your tokens into new structures, leaving the original undisturbed.</p>
+                </div>
+                <div class="bento-item glass js-bento highlight-black">
+                    <div class="bento-icon">🗝️</div>
+                    <span class="bento-title">Object.keys()</span>
+                    <p>Extract the soul from the vessel.</p>
+                </div>
+                <div class="bento-item glass js-bento highlight-red">
+                    <div class="bento-icon">🎲</div>
+                    <span class="bento-title">Math.random()</span>
+                    <p>Embrace the chaos of the red mana.</p>
+                </div>
+                <div class="bento-item glass js-bento highlight-green">
+                    <div class="bento-icon">🌱</div>
+                    <span class="bento-title">Set()</span>
+                    <p>Unique elements only. No duplicates allowed on the board.</p>
+                </div>
+                <div class="bento-item span-2 glass js-bento highlight-blue">
+                    <div class="bento-icon">🔮</div>
+                    <span class="bento-title">Fetch()</span>
+                    <p>Communicate with distant planes via HTTP and async promises.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Spacious closing layout -->
+        <section class="section-closing" id="closing-section">
+            <div class="parallax-layer layer-back">
+                <div class="mana-symbol enormous closing-mana glow-slow">🔮</div>
+            </div>
+            <div class="closing-content js-fade-in">
+                <h2>Pass the Turn.</h2>
+                <p class="closing-subtitle">You have mastered the mechanics. Now assemble your deck.</p>
+                <div class="mana-divider end">
+                    <span class="white">●</span>
+                    <span class="blue">●</span>
+                    <span class="black">●</span>
+                    <span class="red">●</span>
+                    <span class="green">●</span>
+                </div>
+                <button class="magic-btn massive">Initialize Project</button>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- GSAP and ScrollTrigger CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -10,14 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-gradient-1: #1e1b4b;
-            --bg-gradient-2: #312e81;
-            --bg-gradient-3: #4c1d95;
-            --accent-glow: rgba(139, 92, 246, 0.4);
-            --card-bg: rgba(255, 255, 255, 0.05);
-            --card-border: rgba(255, 255, 255, 0.1);
-            --text-primary: #f8fafc;
-            --text-secondary: #cbd5e1;
+            --bg-gradient-1: #fff1f2; /* Soft rose */
+            --bg-gradient-2: #fdf2f8; /* Soft pink */
+            --bg-gradient-3: #ffe4e6; /* Warm blush */
+            --accent-glow: rgba(251, 113, 133, 0.4);
+            --card-bg: rgba(255, 255, 255, 0.55); /* Frosted glass */
+            --card-border: rgba(255, 255, 255, 0.8);
+            --text-primary: #4c0519; /* Deep rose/burgundy */
+            --text-secondary: #9f1239; /* Muted rose */
         }
 
         * {
@@ -52,10 +52,10 @@
             border-radius: 50%;
             filter: blur(80px);
             z-index: 0;
-            opacity: 0.6;
+            opacity: 0.7;
         }
-        .orb-1 { width: 300px; height: 300px; background: #8b5cf6; top: -100px; left: -100px; animation: float 8s ease-in-out infinite; }
-        .orb-2 { width: 400px; height: 400px; background: #ec4899; bottom: -150px; right: -100px; animation: float 12s ease-in-out infinite reverse; }
+        .orb-1 { width: 300px; height: 300px; background: #fda4af; top: -100px; left: -100px; animation: float 8s ease-in-out infinite; }
+        .orb-2 { width: 400px; height: 400px; background: #f9a8d4; bottom: -150px; right: -100px; animation: float 12s ease-in-out infinite reverse; }
 
         @keyframes float {
             0%, 100% { transform: translateY(0) scale(1); }
@@ -66,14 +66,14 @@
             position: relative;
             z-index: 10;
             background: var(--card-bg);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
             border: 1px solid var(--card-border);
             border-radius: 32px;
             padding: 50px;
             max-width: 700px;
             width: 100%;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.1);
+            box-shadow: 0 30px 60px rgba(225, 29, 72, 0.08), inset 0 1px 0 rgba(255,255,255,0.8);
             animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
             opacity: 0;
             transform: translateY(30px);
@@ -83,22 +83,60 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
+        h1 {
+            text-align: center;
+            font-weight: 700;
+            font-size: 3rem;
+            letter-spacing: -0.02em;
+            margin-bottom: 15px;
+            background: linear-gradient(to right, #9f1239, #f43f5e);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
+        .subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 50px;
+            font-size: 1.25rem;
+            font-weight: 300;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .project-link {
+            display: flex;
+            align-items: center;
+            padding: 24px 30px;
+            background: rgba(255, 255, 255, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            color: var(--text-primary);
+            text-decoration: none;
+            border-radius: 20px;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
 
         .project-link::before {
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+            background: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 100%);
             opacity: 0;
             transition: opacity 0.4s ease;
         }
 
         .project-link:hover {
             transform: translateY(-5px) scale(1.02);
-            background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(255, 255, 255, 0.15);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.2), 0 0 20px var(--accent-glow);
+            background: rgba(255, 255, 255, 0.7);
+            border-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 15px 30px rgba(225, 29, 72, 0.1), 0 0 20px var(--accent-glow);
         }
 
         .project-link:hover::before {
@@ -106,7 +144,7 @@
         }
 
         .emoji-wrapper {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.7);
             width: 60px;
             height: 60px;
             border-radius: 16px;
@@ -116,7 +154,7 @@
             font-size: 2rem;
             margin-right: 20px;
             transition: transform 0.4s ease;
-            box-shadow: inset 0 2px 0 rgba(255,255,255,0.1);
+            box-shadow: inset 0 2px 0 rgba(255,255,255,0.8), 0 4px 10px rgba(0,0,0,0.03);
         }
 
         .project-link:hover .emoji-wrapper {
@@ -161,20 +199,20 @@
             align-items: center;
             margin-top: 10px;
             padding: 6px 14px;
-            background: rgba(139, 92, 246, 0.2);
-            color: #d8b4fe;
+            background: rgba(244, 63, 94, 0.1);
+            color: #e11d48;
             border-radius: 20px;
             font-size: 0.85rem;
             font-weight: 500;
             text-decoration: none;
             transition: background 0.2s ease;
-            border: 1px solid rgba(139, 92, 246, 0.3);
+            border: 1px solid rgba(244, 63, 94, 0.2);
             pointer-events: auto; /* Enable clicks separate from exactly the main link */
         }
         
         .download-action:hover {
-            background: rgba(139, 92, 246, 0.4);
-            color: #fff;
+            background: rgba(244, 63, 94, 0.2);
+            color: #be123c;
         }
     </style>
 </head>

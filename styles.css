@@ -1,29 +1,31 @@
 :root {
-  --bg: #fff7f4;
-  --bg-2: #fdf1ea;
-  --surface: #fffdfa;
-  --surface-2: #fdf4ef;
-  --text: #3f2b36;
-  --muted: #806674;
-  --accent: #cb7d9a;
-  --accent-2: #a17bb5;
-  --accent-soft: #f7dfe9;
-  --border: #ebcfdc;
-  --shadow: 0 14px 30px rgba(130, 77, 99, 0.11);
+  --bg: #fffaf1;
+  --bg-2: #f2f8ff;
+  --surface: #fffdf7;
+  --surface-2: #f9fbf4;
+  --text: #2f3142;
+  --muted: #637287;
+  --accent: #f39ab5;
+  --accent-2: #8ecae6;
+  --accent-3: #bfe3b4;
+  --accent-soft: #fde9c9;
+  --border: #d9e6df;
+  --shadow: 0 14px 30px rgba(102, 130, 129, 0.14);
 }
 
 :root[data-theme='dark'],
 :root[data-theme='system'][data-system-theme='dark'] {
-  --bg: #211722;
-  --bg-2: #2a1f2b;
-  --surface: #312333;
-  --surface-2: #3b2b3e;
-  --text: #faecf2;
-  --muted: #ddc0ce;
-  --accent: #f2a1c0;
-  --accent-2: #d2b2f4;
-  --accent-soft: #5d4153;
-  --border: #6e4f64;
+  --bg: #1d2330;
+  --bg-2: #20313d;
+  --surface: #2a3441;
+  --surface-2: #334150;
+  --text: #f6f4ea;
+  --muted: #c8d6d0;
+  --accent: #f5a7bf;
+  --accent-2: #8fd3ef;
+  --accent-3: #a7d9a4;
+  --accent-soft: #5d6371;
+  --border: #5f7081;
   --shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
 }
 
@@ -31,7 +33,7 @@
 html, body { margin: 0; }
 body {
   font-family: 'Nunito', 'Inter', sans-serif;
-  background: radial-gradient(circle at top left, var(--bg), var(--bg-2) 65%);
+  background: radial-gradient(circle at top left, #fffce8 0%, var(--bg) 30%, var(--bg-2) 100%);
   color: var(--text);
   line-height: 1.52;
 }
@@ -70,7 +72,7 @@ label, .chip, .status-pill, .meta {
   position: sticky;
   top: 1rem;
   align-self: start;
-  background: linear-gradient(180deg, color-mix(in oklab, var(--surface), #fff 30%), var(--surface));
+  background: linear-gradient(180deg, color-mix(in oklab, var(--surface), #fff4cf 30%), var(--surface));
   border: 1px solid var(--border);
   border-radius: 24px;
   box-shadow: var(--shadow);
@@ -91,7 +93,7 @@ label, .chip, .status-pill, .meta {
 }
 
 .sidebar-nav a:hover, .sidebar-nav a:focus {
-  background: var(--accent-soft);
+  background: color-mix(in oklab, var(--accent-soft), #ffd9e5 35%);
   outline: none;
   transform: translateX(2px);
 }
@@ -99,7 +101,7 @@ label, .chip, .status-pill, .meta {
 .widget { margin-top: 1rem; }
 .widget textarea { width: 100%; }
 .meter-label { display: flex; justify-content: space-between; margin-bottom: 0.25rem; }
-progress { width: 100%; height: 0.7rem; accent-color: var(--accent); }
+progress { width: 100%; height: 0.7rem; accent-color: #89c7a3; }
 
 .main-content { display: grid; gap: 1rem; }
 
@@ -136,16 +138,17 @@ button, input, select, textarea {
 
 button {
   border-radius: 999px;
-  background: linear-gradient(120deg, var(--accent), var(--accent-2));
-  color: #fff;
+  background: linear-gradient(120deg, var(--accent), #f8cb7c 45%, var(--accent-2));
+  color: #3f3340;
   border: none;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(145, 85, 120, 0.25);
+  box-shadow: 0 4px 10px rgba(120, 150, 140, 0.25);
+  font-weight: 700;
 }
 
 button:hover {
   transform: translateY(-1px);
-  filter: brightness(1.05);
+  filter: brightness(1.04);
 }
 
 button:focus-visible,
@@ -153,7 +156,7 @@ input:focus-visible,
 textarea:focus-visible,
 select:focus-visible,
 summary:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--accent-2);
   outline-offset: 2px;
 }
 
@@ -170,17 +173,17 @@ th, td { border-bottom: 1px solid var(--border); text-align: left; padding: 0.55
   padding: 0.2rem 0.46rem;
   margin: 0.1rem;
   border-radius: 999px;
-  background: var(--accent-soft);
+  background: color-mix(in oklab, var(--accent-3), #ffffff 45%);
 }
 
 .status-pill { display: inline-flex; padding: 0.2rem 0.55rem; border-radius: 999px; }
-.status-not-started, .status-planned { background: #e6cfd8; color: #432734; }
-.status-in-progress, .status-running { background: #f0dfb8; color: #49380e; }
-.status-completed, .status-done { background: #c3e2c8; color: #16391f; }
+.status-not-started, .status-planned { background: #f9dce8; color: #5a3a49; }
+.status-in-progress, .status-running { background: #f8edbb; color: #5a4a1d; }
+.status-completed, .status-done { background: #cbeac8; color: #23482a; }
 
 .weekly-grid { display: grid; gap: 0.8rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 .week-card {
-  background: linear-gradient(160deg, var(--surface-2), color-mix(in oklab, var(--surface-2), #fff 20%));
+  background: linear-gradient(160deg, color-mix(in oklab, var(--surface-2), #e5f6ff 15%), color-mix(in oklab, var(--surface-2), #fff9d8 18%));
   border: 1px solid var(--border);
   border-radius: 18px;
   padding: 0.8rem;

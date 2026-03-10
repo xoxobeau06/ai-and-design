@@ -3,178 +3,277 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Visual System Starter Kit - A constraint-based system for human-led, AI-supported design. Learn how to think in systems through intentional structure.">
-    <title>Visual System Starter Kit | Constraint-Based Design</title>
+    <meta name="description" content="The Visual System Starter Kit - A design education toolkit and research guide for building visual systems through organization and structured creativity.">
+    <title>The Visual System Starter Kit</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
+    <!-- Using Inter for body and a clean Serif (e.g. Lora or Playfair) for headings -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="glow-bg glow-1"></div>
-    <div class="glow-bg glow-2"></div>
-    
-    <nav class="glass-nav">
-        <div class="nav-content">
-            <div class="logo">System<span>Starter</span></div>
+
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="#hero" class="nav-brand">System Starter</a>
             <ul class="nav-links">
-                <li><a href="#philosophy">Philosophy</a></li>
-                <li><a href="#framework">Framework</a></li>
-                <li><a href="#ai">AI Protocol</a></li>
-                <li><a href="#download" class="btn-primary-small">Get the Toolkit</a></li>
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#understanding">Understanding Systems</a></li>
+                <li><a href="#research">The Research</a></li>
+                <li><a href="#building">Building Process</a></li>
+                <li><a href="#toolkit">The Toolkit</a></li>
+                <li><a href="#ai">AI Collaboration</a></li>
             </ul>
         </div>
     </nav>
 
     <main>
-        <section id="hero" class="hero-section">
-            <div class="hero-content">
-                <div class="badge">A Thinking Framework</div>
-                <h1>Design through <br><span class="text-gradient">Constraints.</span></h1>
-                <p class="subtitle">A usable toolkit that explains the process, logic, and philosophy of building visual systems. Emphasize constraint-setting as creative clarity, integrate AI as a collaborator, and reinforce human authorship.</p>
-                <div class="hero-actions">
-                    <a href="#download" class="btn-primary">Download Toolkit <span class="arrow">→</span></a>
-                    <a href="#philosophy" class="btn-secondary">Explore the Process</a>
+        <!-- Section 1: Introduction -->
+        <header id="hero" class="hero-section section-layout">
+            <div class="container hero-content">
+                <span class="eyebrow">A Framework for Growth</span>
+                <h1>The Visual System <br>Starter Kit.</h1>
+                <p class="lead-text">
+                    Design systems help organize creative thinking. Many believe creativity and organization are opposites, but organization itself is a deeply creative act.
+                </p>
+                <p>
+                    Whether you love structuring ideas or feel naturally creative but struggle with boundaries, this process provides scaffolding. Design systems are not rigid rules—they are flexible frameworks that support true authorship.
+                </p>
+                <div class="actions">
+                    <a href="#toolkit" class="btn btn-primary">Explore the Toolkit</a>
+                    <a href="#intro" class="btn btn-secondary">Learn the Process</a>
                 </div>
             </div>
-            <div class="hero-visual">
-                <img src="assets/constraints.png" alt="Abstract rendering of design constraints" class="floating-image">
-            </div>
-        </section>
+        </header>
 
-        <section id="philosophy" class="philosophy-section section-padding">
-            <div class="section-header">
-                <h2>The Process & Logic</h2>
-                <p>Move from chaotic inspiration to structured clarity.</p>
-            </div>
-            <div class="grid-3">
-                <div class="card glass-card">
-                    <div class="card-icon">01</div>
-                    <h3>What it is</h3>
-                    <p>A thinking framework and constraint-based system starter. It explains why systems create clarity and how constraints fuel genuine creativity.</p>
-                </div>
-                <div class="card glass-card">
-                    <div class="card-icon">02</div>
-                    <h3>What it is not</h3>
-                    <p>It is not a final style guide, a bloated component library, a random template pack, or a purely theoretical essay. It is scaffolding.</p>
-                </div>
-                <div class="card glass-card">
-                    <div class="card-icon">03</div>
-                    <h3>The AI Role</h3>
-                    <p>AI acts as a pattern amplifier and variation engine. You retain the human responsibility for constraints, taste, and final decisions.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="why-systems" class="why-systems-section section-padding">
-            <div class="split-layout reverse">
-                <div class="split-content">
-                    <h2>Why Systems <span class="text-gradient">Matter</span></h2>
-                    <p>There is a profound difference between a moodboard, a style tile, and a visual system.</p>
-                    <ul class="feature-list">
-                        <li><strong>Consistency & Repetition:</strong> Without a system, interfaces fray at the edges. Systems establish the rhythm.</li>
-                        <li><strong>The 50 Shades Trap:</strong> Avoid creating too many primitive tokens without semantic meaning.</li>
-                        <li><strong>The Component Hoarder:</strong> Building variants without defining typography logic leads to chaos.</li>
-                    </ul>
-                </div>
-                <div class="split-visual abstract-box">
-                    <div class="glass-panel panel-1">Typography Scale</div>
-                    <div class="glass-panel panel-2">Color Logic</div>
-                    <div class="glass-panel panel-3">Spacing Rhythm</div>
-                </div>
-            </div>
-        </section>
-
-        <section id="framework" class="framework-section section-padding">
-            <div class="section-header center">
-                <h2>The 5 Core <span class="text-gradient">Components</span></h2>
-                <p>The Figma toolkit is structured into five distinct phases of system thinking.</p>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item appear-scroll">
-                    <div class="timeline-marker">1</div>
-                    <div class="timeline-content glass-card outline">
-                        <h3>System Comparison Template</h3>
-                        <p>Structured comparison frames with columns for color logic, typography scale, spacing, and tone. Extract rules, don't just copy aesthetics.</p>
+        <!-- Section 1 cont / Deep Intro -->
+        <section id="intro" class="intro-section section-layout bg-alt">
+            <div class="container">
+                <div class="grid-2-col">
+                    <div class="text-block">
+                        <h2>Creativity & Organization</h2>
+                        <p>This toolkit is built for designers who want to create visual systems but aren't sure where to start. We provide a structured process to turn chaotic inspiration into a cohesive language.</p>
+                        <p>A system doesn't replace your taste; it amplifies your decisions so you don't have to make the same micro-choices over and over again.</p>
                     </div>
-                </div>
-                <div class="timeline-item appear-scroll">
-                    <div class="timeline-marker">2</div>
-                    <div class="timeline-content glass-card outline">
-                        <h3>Reference Annotation</h3>
-                        <p>Categorized inspiration frames with required annotation tags. Explain <em>why</em> the reference works using X-Ray vision measuring tools.</p>
-                    </div>
-                </div>
-                <div class="timeline-item appear-scroll">
-                    <div class="timeline-marker">3</div>
-                    <div class="timeline-content glass-card outline">
-                        <h3>The Constraint Contract</h3>
-                        <p>Define 2–3 core constraints. What is the rationale? What does it allow? What does it prevent? Stress-test them with extreme exercises.</p>
-                    </div>
-                </div>
-                <div class="timeline-item appear-scroll">
-                    <div class="timeline-marker">4</div>
-                    <div class="timeline-content glass-card outline">
-                        <h3>AI Prompt Dashboard</h3>
-                        <p>Mad-libs style prompt templates for structured variation. Know explicitly when to use AI and when human taste must prevail.</p>
-                    </div>
-                </div>
-                <div class="timeline-item appear-scroll">
-                    <div class="timeline-marker">5</div>
-                    <div class="timeline-content glass-card outline">
-                        <h3>Token Translator Workshop</h3>
-                        <p>Primitive color and semantic tokens mapping. Unstyled core components waiting for your constraints to breathe life into them.</p>
+                    <div class="diagram-block intro-diagram">
+                        <!-- CSS Diagram placeholder -->
+                        <div class="diagram-box">Idea</div>
+                        <div class="diagram-arrow">→</div>
+                        <div class="diagram-box">Structure</div>
+                        <div class="diagram-arrow">→</div>
+                        <div class="diagram-box highlight">System</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="ai" class="ai-section section-padding">
-             <div class="split-layout align-center">
-                <div class="split-visual">
-                    <img src="assets/ai.png" alt="AI Neural Network Collaboration" class="glow-image">
+        <!-- Section 2: Understanding Design Systems -->
+        <section id="understanding" class="understanding-section section-layout">
+            <div class="container">
+                <header class="section-header">
+                    <h2>Understanding Visual Systems</h2>
+                    <p class="subtitle">Clarity and flexibility, not limitations.</p>
+                </header>
+                
+                <div class="concept-grid">
+                    <article class="concept-card">
+                        <h3>Tokens</h3>
+                        <p>The irreducible core values. Colors, type sizes, and spacing units that act as your design vocabulary.</p>
+                    </article>
+                    <article class="concept-card">
+                        <h3>Components</h3>
+                        <p>Interactive building blocks. Buttons, inputs, and cards built from tokens to ensure strict consistency.</p>
+                    </article>
+                    <article class="concept-card">
+                        <h3>Hierarchy</h3>
+                        <p>The established visual order that guides a user's eye and explains the relationship between elements.</p>
+                    </article>
+                    <article class="concept-card">
+                        <h3>Modular Design</h3>
+                        <p>Patterns designed to snap together predictably, ensuring that the system can scale seamlessly.</p>
+                    </article>
                 </div>
-                <div class="split-content">
-                    <h2>The <span class="text-gradient hover-trigger">Human-AI-Human</span> Loop</h2>
-                    <p>AI is a phenomenal permutation engine, but a terrible author. Learn the protocol for integration without abdication.</p>
+            </div>
+        </section>
+
+        <!-- Section 3: The Research Process -->
+        <section id="research" class="research-section section-layout bg-alt">
+            <div class="container">
+                <header class="section-header">
+                    <h2>The Research Journey</h2>
+                    <p class="subtitle">A five-week exploration of design organization and authorship.</p>
+                </header>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker">Week 1</div>
+                        <div class="timeline-content">
+                            <h3>Dissecting System Logic</h3>
+                            <p>Exploring how design systems reveal the logic behind visual communication. We strip away the stylistic surface to see the mathematical rhythms underneath.</p>
+                        </div>
+                    </div>
                     
-                    <div class="loop-step">
-                        <h4>1. Human (Context & Constraints)</h4>
-                        <p>Define the rigid boundaries (e.g., "Only Inter, 3 weights, 4-step spacing").</p>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">Week 2</div>
+                        <div class="timeline-content">
+                            <h3>Reference as Curatorial Authorship</h3>
+                            <p>Studying how collecting and organizing references becomes a creative act. The references you choose dictate the boundaries of your system.</p>
+                        </div>
                     </div>
-                    <div class="loop-step">
-                        <h4>2. AI (Permutation & Variation)</h4>
-                        <p>Prompting the AI to explore within the boundaries to generate bulk CSS or layout tests.</p>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">Week 3</div>
+                        <div class="timeline-content">
+                            <h3>Constraint as Framework</h3>
+                            <p>Learning how constraints guide design decisions and encourage creativity. When everything is possible, nothing gets done. Constraints provide friction.</p>
+                        </div>
                     </div>
-                    <div class="loop-step">
-                        <h4>3. Human (Curation & Refinement)</h4>
-                        <p>Select the best outcome, check for system adherence, and apply stylistic taste.</p>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">Week 4</div>
+                        <div class="timeline-content">
+                            <h3>Documentation as Interpretation</h3>
+                            <p>Understanding how documenting your process fundamentally changes how you view your own work. Writing rules forces clarity.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">Week 5</div>
+                        <div class="timeline-content">
+                            <h3>Synthesizing & Building</h3>
+                            <p>Combining all insights into a structured toolkit for creating visual systems, moving from academic theory to practical application.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="download" class="cta-section section-padding">
-            <div class="cta-card glass-card">
-                <h2>Ready to Build Your System?</h2>
-                <p>Download the exclusive Figma toolkit and begin the process of structured constraint setting.</p>
-                <div class="toolkit-includes">
-                    <span>✓ System Worksheets</span>
-                    <span>✓ Prompt Builder</span>
-                    <span>✓ Token Translator</span>
+        <!-- Section 4: The System Building Process -->
+        <section id="building" class="building-section section-layout">
+            <div class="container">
+                <h2 class="center-text">The Step-by-Step Building Process</h2>
+                
+                <ol class="process-steps">
+                    <li>
+                        <div class="step-number">01</div>
+                        <div class="step-details">
+                            <h3>Compare Existing Systems</h3>
+                            <p>Deconstruct established frameworks to understand why they work. You cannot build a system if you cannot read one.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-number">02</div>
+                        <div class="step-details">
+                            <h3>Collect References</h3>
+                            <p>Gather inspiration intentionally. Don't just save images—annotate exactly what typographic or structural choices you are capturing.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-number">03</div>
+                        <div class="step-details">
+                            <h3>Define Constraints</h3>
+                            <p>Establish the rules early. Select a limited typography scale, exact spacing measurements, and core colors before building components.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-number">04</div>
+                        <div class="step-details">
+                            <h3>Document Decisions</h3>
+                            <p>Write down why a rule exists. If you change a rule, explain what led to that change. A system fails without a record of intention.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-number">05</div>
+                        <div class="step-details">
+                            <h3>Build the Structure</h3>
+                            <p>Begin assembling primitives into components and, finally, into complete page structures, referencing the rules established in step three.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Section 5: The Toolkit -->
+        <section id="toolkit" class="toolkit-section section-layout bg-alt">
+            <div class="container center-text">
+                <h2>The Starter Toolkit</h2>
+                <p class="subtitle max-width-p">Ready to organize your creative chaos? Use these structured worksheets to begin your system.</p>
+                
+                <div class="toolkit-grid">
+                    <div class="tool-card">
+                        <h4>System Comparison Template</h4>
+                        <p>Understand the DNA of high-performing systems by mapping them side by side.</p>
+                        <span class="use-case">Use when decoding inspiration.</span>
+                    </div>
+                    <div class="tool-card">
+                        <h4>Reference Collection Framework</h4>
+                        <p>Turn infinite moodboards into highly specific, annotated research libraries.</p>
+                        <span class="use-case">Use when defining aesthetic direction.</span>
+                    </div>
+                    <div class="tool-card">
+                        <h4>Constraint-Setting Worksheet</h4>
+                        <p>Commit your foundational rules to "paper" before drawing a single rectangle.</p>
+                        <span class="use-case">Use before structural execution.</span>
+                    </div>
+                    <div class="tool-card">
+                        <h4>Visual System Starter File</h4>
+                        <p>A blank, structured Figma template pre-configured for token and component logic.</p>
+                        <span class="use-case">Use when building components.</span>
+                    </div>
                 </div>
-                <button class="btn-primary large interactive-btn">Download Figma Kit</button>
-                <p class="sub-text">Perfect for design students, junior designers, and solo creatives.</p>
+                
+                <div class="download-box">
+                    <a href="#" class="btn btn-primary large-btn">Download the Figma Toolkit</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: AI Collaboration -->
+        <section id="ai" class="ai-section section-layout">
+            <div class="container">
+                <div class="grid-2-col ai-grid">
+                    <div class="text-block">
+                        <h2>AI as a System Collaborator</h2>
+                        <p>AI is a brilliant pattern-matcher but a terrible author. It can accelerate your workflow without replacing your creative viewpoint.</p>
+                        <p>Use the <strong>AI Collaboration Protocol</strong> to maintain control:</p>
+                        <ul class="styled-list">
+                            <li><strong>Brainstorming:</strong> Generate naming conventions or token aliases rapidly.</li>
+                            <li><strong>Pattern Recognition:</strong> Surface structural overlaps you might have missed in your logic.</li>
+                            <li><strong>Information Organization:</strong> Group massive component sets logically.</li>
+                        </ul>
+                        <p><em>The designer defines the constraints; the AI permutes. The designer curates the final result.</em></p>
+                    </div>
+                    <div class="diagram-block ai-diagram">
+                        <div class="circle-diagram">
+                            <span class="human">Human Authored Rules</span>
+                            <span class="ai-loop">AI Variation Engine</span>
+                            <span class="human">Human Curation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Reflection -->
+        <section class="reflection-section section-layout bg-dark">
+            <div class="container container-narrow center-text">
+                <h2>A Final Reflection</h2>
+                <p class="large-body">
+                    Organization is not just preparation for design—it is part of the creative process.
+                </p>
+                <p>
+                    By embracing constraints and designing systems, you ensure your vision scales gracefully. We encourage you to adapt this toolkit to fit your specific mental model and workflow.
+                </p>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="logo">System<span>Starter</span></div>
-            <p>Designed for human-led, AI-supported structural thinking.</p>
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 The Visual System Starter Kit. A research project on design systems and authorship.</p>
         </div>
     </footer>
+
 </body>
 </html>

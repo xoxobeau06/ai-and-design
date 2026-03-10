@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Visual System Guide - A fun, guided walkthrough teaching designers how to build visual systems.">
+    <title>The Visual System Guide | A Guided Walkthrough</title>
+    
+    <!-- Typography: Outfit for headers (friendly, round), Nunito for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <!-- Custom Script -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Whimsical Background Elements -->
+    <div class="bg-shape bg-shape-1"></div>
+    <div class="bg-shape bg-shape-2"></div>
+    <div class="bg-shape bg-shape-3"></div>
+    <div class="bg-shape bg-shape-4"></div>
+
+    <!-- Sticky Table of Contents Sidebar -->
+    <nav class="sidebar-nav gs-reveal-sidebar">
+        <div class="nav-header">
+            <span class="logo">🌿 System Guide</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Start Here <div class="link-blob"></div></a></li>
+            <li><a href="#why">Why Systems Matter <div class="link-blob"></div></a></li>
+            <li><a href="#how">How This Guide Works <div class="link-blob"></div></a></li>
+            <li class="nav-section-title">The Walkthrough</li>
+            <li><a href="#step-1">1. Study Systems <div class="link-blob"></div></a></li>
+            <li><a href="#step-2">2. Collect References <div class="link-blob"></div></a></li>
+            <li><a href="#step-3">3. Define Constraints <div class="link-blob"></div></a></li>
+            <li><a href="#step-4">4. Document Decisions <div class="link-blob"></div></a></li>
+            <li><a href="#step-5">5. Build the System <div class="link-blob"></div></a></li>
+            <li class="nav-section-title">Resources</li>
+            <li><a href="#ai">AI in the Process <div class="link-blob"></div></a></li>
+            <li><a href="#toolkit">Toolkit / Resources <div class="link-blob"></div></a></li>
+            <li><a href="#reflection">Reflection <div class="link-blob"></div></a></li>
+        </ul>
+        <div id="nav-indicator"></div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="content-wrapper">
+        
+        <!-- 1. Start Here / Home -->
+        <section id="home" class="content-section hero-section">
+            <span class="eyebrow gs-hero-element">A Guided Walkthrough</span>
+            <h1 class="gs-hero-title">The Visual System<br>Guide. <span class="sparkle">✨</span></h1>
+            
+            <div class="hero-text-block">
+                <p class="lead-text gs-hero-element">
+                    This guide is a fun, educational handbook teaching designers how to build visual systems step-by-step.
+                </p>
+                <div class="glass-card gs-hero-element">
+                    <p>
+                        Many believe that organization stifles creativity. The central thesis of this guide is the exact opposite: <strong>organization and creativity support each other</strong>. 
+                    </p>
+                    <p>
+                        Designers who naturally think in organized structures can use them as a canvas for deep creativity. Those who feel more intuitive can use these structured frameworks to ground their ideas. A system is not a rigid cage—it's a playground.
+                    </p>
+                </div>
+                <div class="call-to-action gs-hero-element mt-lg">
+                    <a href="#why" class="btn btn-primary btn-bouncy">Begin the Walkthrough &nbsp; <span class="arrow-down">↓</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Why Visual Systems Matter -->
+        <section id="why" class="content-section">
+            <header class="section-header gs-reveal-up">
+                <h2>Why Visual Systems Matter</h2>
+                <p class="subtitle">Orchestrating logic and scale (while having fun).</p>
+            </header>
+            
+            <p class="gs-reveal-up max-w-p">
+                A visual system is the underlying logic that dictates how an interface or brand looks and behaves. We use them not to limit ourselves, but to organize our ideas and scale our creative work.
+            </p>
+            
+            <div class="grid-2-col">
+                <div class="concept-card gs-stagger-card bg-mint">
+                    <div class="icon-blob">🎨</div>
+                    <h4>Core Foundations</h4>
+                    <p>Meaningful color palettes, typography scales, and spacing units that act as the alphabet of your language.</p>
+                </div>
+                <div class="concept-card gs-stagger-card bg-peach">
+                    <div class="icon-blob">📐</div>
+                    <h4>Hierarchy & Order</h4>
+                    <p>Predictable visual order helping designers communicate clearly and helping users navigate effortlessly.</p>
+                </div>
+                <div class="concept-card gs-stagger-card bg-lavender">
+                    <div class="icon-blob">🧩</div>
+                    <h4>Components</h4>
+                    <p>The interactive building blocks created from definitions. Buttons, forms, and cards that combine into layouts.</p>
+                </div>
+                <div class="concept-card gs-stagger-card bg-yellow">
+                    <div class="icon-blob">♻️</div>
+                    <h4>Modular Reuse</h4>
+                    <p>By defining patterns, designers can iterate rapidly and scale ideas consistently without starting over.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. How This Guide Works -->
+        <section id="how" class="content-section">
+            <div class="glass-card focus-card gs-reveal-scale">
+                <header class="section-header">
+                    <h2>How This Guide Works</h2>
+                </header>
+                <p class="lead-text">
+                    This guide is grounded in a five-week research process exploring how organization functions as creative authorship.
+                </p>
+                <p>
+                    We will walk through five chronological steps to building a valid system. Start by dissecting others' work, curate your references, set rigid constraints, document your logic, and build your personal framework.
+                </p>
+            </div>
+        </section>
+
+        <!-- Guided Walkthrough: Steps 1 - 5 -->
+        <div class="walkthrough-container">
+            <div class="walkthrough-label gs-reveal-up">The 5-Step Process 🌷</div>
+
+            <!-- Step 1 -->
+            <section id="step-1" class="content-section step-section gs-reveal-left">
+                <div class="step-indicator">Step 01</div>
+                <h2>Study Existing Systems</h2>
+                <p class="subtitle">Systems as Shared Languages</p>
+                
+                <p>
+                    A design system is more than just a visual style guide; it is a shared language that helps teams work together and make consistent decisions. When studying systems like Material, Carbon, Polaris, and Atlassian, a universal truth emerges: despite belonging to vastly different companies, they all rely on the same foundational structure of <strong>foundations, tokens, and components</strong>.
+                </p>
+                <div class="glass-card mt-sm bg-lavender">
+                    <h4>The Power of Tokens</h4>
+                    <p>A hex code is just a color, but a <em>token</em> like <code>text-primary</code> is a decision with meaning behind it. Tokens explain how and where a value should be used, forming the backbone of system maintenance and scalability over time.</p>
+                </div>
+            </section>
+
+            <!-- Step 2 -->
+            <section id="step-2" class="content-section step-section gs-reveal-left">
+                <div class="step-indicator">Step 02</div>
+                <h2>Collect and Organize References</h2>
+                <p class="subtitle">The Reference Garden Metaphor</p>
+                
+                <p>
+                    Reference collection is often treated like dumping screenshots into a folder. Instead, we should approach it through the metaphor of a <strong>Garden</strong>. 
+                </p>
+                <p>
+                    A garden provides a calm, tranquil framework for structured reference collection. You don't just throw seeds everywhere; you plan a real garden by choosing exactly what to plant, placing it intentionally, and considering how every element works together in the ecosystem. Curating inspiration requires this same deliberate authorship.
+                </p>
+            </section>
+
+            <!-- Step 3 -->
+            <section id="step-3" class="content-section step-section gs-reveal-left">
+                <div class="step-indicator">Step 03</div>
+                <h2>Define Constraints</h2>
+                <p class="subtitle">Protecting Clarity Through Limitations</p>
+                
+                <p>
+                    Large-scale systems rely heavily on constraints to protect clarity and consistency. By analyzing guidelines from companies like Spotify, we see that limiting choices actually enables better creativity.
+                </p>
+                <div class="constraint-box glass-card bg-mint">
+                    <h4>Case Study: Typographic Mini-System</h4>
+                    <p>To test this, a 3-level typographic mini-system was created using <em>Bitters</em> and <em>Instrument Sans</em> for an educational toolkit landing page. By defining three core constraints—<strong>hierarchy, size limitation, and weight restriction</strong>—and applying them to rough wireframes, the system was stress-tested for both clarity and scalability.</p>
+                </div>
+            </section>
+
+            <!-- Step 4 -->
+            <section id="step-4" class="content-section step-section gs-reveal-left">
+                <div class="step-indicator">Step 04</div>
+                <h2>Document the System</h2>
+                <p class="subtitle">Documentation as Infrastructure & Translation</p>
+                
+                <p>
+                    Documentation is often viewed as merely descriptive. However, governance research reframes documentation as crucial <strong>infrastructure</strong>. It determines ownership, scalability, and authority within a system.
+                </p>
+                <p>
+                    Ultimately, documentation acts as a translation layer between design and development. The way information is structured—covering anatomy, usage, accessibility, and governance down to the handoff—reflects underlying values and power dynamics. It is as much a social tool as a technical one.
+                </p>
+            </section>
+
+            <!-- Step 5 -->
+            <section id="step-5" class="content-section step-section gs-reveal-left">
+                <div class="step-indicator">Step 05</div>
+                <h2>Build the Visual System</h2>
+                <p class="subtitle">Synthesizing & Building Toolkit</p>
+                
+                <p>
+                    It is time to execute. Combine your research, references, constraints, and documentation into a working visual system file.
+                </p>
+                <ol class="educational-ordered-list pill-list">
+                    <li><span>1</span>Define your foundations.</li>
+                    <li><span>2</span>Map out semantic tokens.</li>
+                    <li><span>3</span>Construct primitive components.</li>
+                    <li><span>4</span>Combine into complex patterns.</li>
+                </ol>
+            </section>
+        </div>
+
+        <!-- AI IN THE PROCESS -->
+        <section id="ai" class="content-section ai-section gs-reveal-up">
+            <header class="section-header">
+                <h2>AI in the Process 🤖</h2>
+            </header>
+            <p class="max-w-p">
+                AI is an immensely powerful tool for synthesis, provided it is treated as a collaborator rather than an author. 
+            </p>
+            <div class="grid-2-col align-start">
+                <div class="glass-card">
+                    <h4>Structured Pattern Recognition</h4>
+                    <p>Using models like NotebookLM helps identify patterns across vast sources quickly. It excels at extracting recurring framework categories like anatomy, usage, accessibility, and governance flows across disparate texts.</p>
+                </div>
+                <div class="glass-card">
+                    <h4>The Human Necessity</h4>
+                    <p>However, AI tends to flatten nuance into overly clean structures. Creating physical or spatial visual notes forces the designer to reorganize ideas themselves, clarifying complex relationships (like the link between governance, documentation, and handoff) that AI misses.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TOOLKIT / RESOURCES -->
+        <section id="toolkit" class="content-section gs-reveal-scale">
+            <div class="resource-container glass-card">
+                <header class="section-header center">
+                    <h2>Toolkit & Resources 🎁</h2>
+                    <p class="subtitle">Practical tools to accompany the fun.</p>
+                </header>
+                
+                <div class="grid-2-col">
+                    <div class="tool-card bg-mint">
+                        <h4>System Comparison</h4>
+                        <p>A mapping document to reverse-engineer industry-leading system logic.</p>
+                    </div>
+                    <div class="tool-card bg-peach">
+                        <h4>Reference Collection</h4>
+                        <p>Turn moodboards into specific, annotated research libraries.</p>
+                    </div>
+                    <div class="tool-card bg-lavender">
+                        <h4>Constraint Worksheet</h4>
+                        <p>Write down your foundational rules before drawing a single rectangle.</p>
+                    </div>
+                    <div class="tool-card bg-yellow">
+                        <h4>AI Protocol</h4>
+                        <p>Prompt recipes to help generate system variations cleanly.</p>
+                    </div>
+                </div>
+                
+                <div class="center mt-lg">
+                    <a href="#" class="btn btn-primary btn-bouncy">Download All Resources</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- REFLECTION / CONCLUSION -->
+        <section id="reflection" class="content-section">
+            <div class="reflection-box gs-reveal-up">
+                <header class="section-header">
+                    <h2>A Final Reflection 💭</h2>
+                </header>
+                <p class="lead-text">
+                    Organization is not separate from creativity; it is part of how designers interpret and build meaningful things.
+                </p>
+                <p>
+                    Strict frameworks do not produce boring work—they produce cohesive, intentional work. When you remove the friction of basic decision-making, you leave room for genuine creative expression.
+                </p>
+                <p class="signature">Go build something beautiful. ✨</p>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <p>&copy; 2026 The Visual System Guide. Organization can be fun!</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>

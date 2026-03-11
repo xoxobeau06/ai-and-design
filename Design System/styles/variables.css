@@ -1,0 +1,36 @@
+:root {
+  --ivory: #F7F2E9;
+  --blush: #D4A5A0;
+  --sage: #9DAF98;
+  --blue: #92ADC1;
+  --brown: #4A3728;
+  --dust: #C9BFB0;
+  --petal: #E8D5D0;
+  --moss: #B5C4B1;
+  --sky: #D4E4EE;
+  --cream: #EDE8DC;
+  --lavender: #C5ABD2;
+  --butter: #F4D281;
+  --rule: #E0D6CB;
+  --ghost: rgba(212, 165, 160, 0.12);
+
+  --script: 'Pinyon Script', cursive;
+  --hand: 'Shadows Into Light', cursive;
+  --type: 'Special Elite', monospace;
+  --body: 'Lora', Georgia, serif;
+  --ui: 'Jost', sans-serif;
+
+  --page-width: 210mm;
+  --page-height: 297mm;
+  --page-pad-top: 15mm;
+  --page-pad-x: 17mm;
+  --page-pad-bottom: 17mm;
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 20px;
+
+  --shadow-soft: 1px 2px 8px rgba(74, 55, 40, 0.08);
+  --shadow-card: 0 4px 24px rgba(74, 55, 40, 0.12);
+}

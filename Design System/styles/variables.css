@@ -1,36 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Shadows+Into+Light&family=Special+Elite&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;700;800&family=IBM+Plex+Serif:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
 :root {
-  --ivory: #F7F2E9;
-  --blush: #D4A5A0;
-  --sage: #9DAF98;
-  --blue: #92ADC1;
-  --brown: #4A3728;
-  --dust: #C9BFB0;
-  --petal: #E8D5D0;
-  --moss: #B5C4B1;
-  --sky: #D4E4EE;
-  --cream: #EDE8DC;
-  --lavender: #C5ABD2;
-  --butter: #F4D281;
-  --rule: #E0D6CB;
-  --ghost: rgba(212, 165, 160, 0.12);
+	--page-width: 210mm;
+	--page-min-height: 297mm;
+	--page-top-padding: 48px;
+	--page-screen-gap: 8mm;
 
-  --script: 'Pinyon Script', cursive;
-  --hand: 'Shadows Into Light', cursive;
-  --type: 'Special Elite', monospace;
-  --body: 'Lora', Georgia, serif;
-  --ui: 'Jost', sans-serif;
+	--inline-input-border: 1px solid currentColor;
+	--inline-input-opacity: 0.6;
 
-  --page-width: 210mm;
-  --page-height: 297mm;
-  --page-pad-top: 15mm;
-  --page-pad-x: 17mm;
-  --page-pad-bottom: 17mm;
+	--save-indicator-font: 'Jost', sans-serif;
+	--save-indicator-color: rgba(157,175,152,0.9);
 
-  --radius-sm: 4px;
-  --radius-md: 6px;
-  --radius-lg: 8px;
-  --radius-xl: 20px;
+	--swatch-placeholder-bg: repeating-linear-gradient(
+		45deg,
+		rgba(128,128,128,0.1) 0,
+		rgba(128,128,128,0.1) 2px,
+		transparent 2px,
+		transparent 8px
+	);
 
-  --shadow-soft: 1px 2px 8px rgba(74, 55, 40, 0.08);
-  --shadow-card: 0 4px 24px rgba(74, 55, 40, 0.12);
+	--overlay-control-bg: rgba(0,0,0,0.45);
+	--overlay-control-bg-strong: rgba(0,0,0,0.5);
+	--overlay-control-text: #fff;
 }

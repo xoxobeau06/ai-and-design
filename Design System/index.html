@@ -1,647 +1,260 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="cozy">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Visual System Template — Design Students</title>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Shadows+Into+Light&family=Special+Elite&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap"
-    rel="stylesheet"
-  />
-
-  <link rel="stylesheet" href="styles/variables.css" />
-  <link rel="stylesheet" href="styles/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visual System Template</title>
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-  <!-- PRINT BAR -->
-  <div class="print-bar">
-    <span><span class="print-bar-title">✿ Visual System Template</span> — Design Students Edition</span>
-    <span class="print-note">Fill in browser · Print or Export as PDF</span>
-    <button class="print-btn" onclick="window.print()">↓ Print / Export PDF</button>
+
+<div class="print-bar">
+  <span class="print-bar-title">✿ Visual System Template</span>
+  <div class="theme-switcher">
+    <button class="theme-btn active" data-theme-btn="cozy"><span class="dot dot-cozy"></span>🌸 Cozy Studio</button>
+    <button class="theme-btn" data-theme-btn="minimal"><span class="dot dot-minimal"></span>○ Minimal</button>
+    <button class="theme-btn" data-theme-btn="abstract"><span class="dot dot-abstract"></span>◈ Abstract</button>
+    <button class="theme-btn" data-theme-btn="dark"><span class="dot dot-dark"></span>✦ Dark Journal</button>
   </div>
+  <span class="print-note">Fill in browser · Print or Export as PDF</span>
+  <span id="saveIndicator" class="save-indicator">✓ saved</span>
+  <button class="print-btn" id="printBtn">↓ Export PDF</button>
+</div>
 
-  <!-- PAGE 1 — COVER -->
-  <div class="page">
-    <div class="page-corner">Visual System</div>
+<div class="page">
+  <div class="page-corner">Visual System</div>
+  <div class="cover-header"></div>
+  <div class="cover-rule"></div>
+  <div class="cover-title" id="coverTitle">A Personal<br><em>Visual</em><br>System.</div>
+  <div class="cover-sub" id="coverSub">Calm · Thoughtful · Warm · Comforting — Personal Visual System, Graphic Design Final Project</div>
+  <div class="cover-description" id="coverDesc">
+    This system is built around one atmosphere: golden morning light,
+    a calm studio, a journal desk. Lace and ribbons hold it together.
+    Ivory and dusty rose set the mood. Everything here is a creative
+    decision — not a restriction, but a commitment to a feeling.
+  </div>
+  <div class="cover-toc">
+    <div class="toc-dot toc-dot-shift"></div><div class="toc-entry">Project Identity</div><div class="toc-page">02</div>
+    <div class="toc-dot toc-dot-shift"></div><div class="toc-entry">Colour System</div><div class="toc-page">03</div>
+    <div class="toc-dot toc-dot-shift"></div><div class="toc-entry">Typography</div><div class="toc-page">04</div>
+    <div class="toc-dot toc-dot-shift"></div><div class="toc-entry">Space + Grid</div><div class="toc-page">05</div>
+    <div class="toc-dot toc-dot-shift"></div><div class="toc-entry">Voice + Tone</div><div class="toc-page">06</div>
+    <div class="toc-dot toc-dot-shift"></div><div class="toc-entry">Reference Board</div><div class="toc-page">07</div>
+    <div class="toc-dot toc-dot-shift"></div><div class="toc-entry">Rules + Constraints</div><div class="toc-page">08</div>
+  </div>
+  <div class="cover-footer">
+    <span>Student: <input type="text" class="inline-input inline-input-wide" placeholder="your name"></span>
+    <span>Project: <input type="text" class="inline-input inline-input-wide" placeholder="project name"></span>
+    <span>Date: <input type="text" class="inline-input inline-input-date" placeholder="DD · MM · YYYY"></span>
+  </div>
+</div>
 
-    <div class="top-rainbow-strip"></div>
-
-    <div class="cover-rule"></div>
-
-    <div class="cover-title">
-      A Personal<br />
-      <em>Visual</em><br />
-      System.
+<div class="page">
+  <div class="page-meta"><span class="project-name">Visual System Template</span><span>02 / Project Identity</span></div>
+  <div class="section-label">§ 01</div>
+  <div class="section-title" id="p2title">Project<br>Identity</div>
+  <div class="section-intro" id="p2intro">This is a personal visual system for a graphic design portfolio — not a UI framework. It exists to support atmosphere and storytelling. Every decision here serves a feeling first, efficiency second.</div>
+  <div class="h-rule heavy"></div>
+  <div class="two-col mb-2">
+    <div>
+      <div class="field-group"><label class="field-label">Project Name</label><input class="field" type="text" placeholder="Your system's name"></div>
+      <div class="field-group"><label class="field-label">Deliverable Type</label><input class="field" type="text" value="Personal Visual System — Digital Portfolio"></div>
+      <div class="field-group"><label class="field-label">Medium / Context</label><input class="field" type="text" value="Digital — Portfolio Website"></div>
     </div>
-    <div class="cover-sub">
-      Calm · Thoughtful · Warm · Comforting — Personal Visual System, Graphic Design Final Project
-    </div>
-
-    <div class="cover-description">
-      This system is built around one atmosphere: golden morning light,
-      a calm studio, a journal desk. Lace and ribbons hold it together.
-      Ivory and dusty rose set the mood. Everything here is a creative
-      decision — not a restriction, but a commitment to a feeling.
-    </div>
-
-    <div class="cover-toc">
-      <div class="toc-dot toc-dot-blush"></div>
-      <div class="toc-entry toc-entry-blush">Project Identity</div>
-      <div class="toc-page">02</div>
-
-      <div class="toc-dot toc-dot-sage"></div>
-      <div class="toc-entry toc-entry-sage">Colour System</div>
-      <div class="toc-page">03</div>
-
-      <div class="toc-dot toc-dot-blue"></div>
-      <div class="toc-entry toc-entry-blue">Typography</div>
-      <div class="toc-page">04</div>
-
-      <div class="toc-dot toc-dot-butter"></div>
-      <div class="toc-entry toc-entry-butter">Space + Grid</div>
-      <div class="toc-page">05</div>
-
-      <div class="toc-dot toc-dot-lavender"></div>
-      <div class="toc-entry toc-entry-lavender">Voice + Tone</div>
-      <div class="toc-page">06</div>
-
-      <div class="toc-dot toc-dot-petal"></div>
-      <div class="toc-entry toc-entry-petal">Reference Board</div>
-      <div class="toc-page">07</div>
-
-      <div class="toc-dot toc-dot-brown"></div>
-      <div class="toc-entry toc-entry-brown">Rules + Constraints</div>
-      <div class="toc-page">08</div>
-    </div>
-
-    <div class="bottom-palette-strip">
-      <div class="palette-pill blush"></div>
-      <div class="palette-pill sage"></div>
-      <div class="palette-pill blue"></div>
-      <div class="palette-pill butter"></div>
-      <div class="palette-pill lavender"></div>
-      <div class="palette-pill petal"></div>
-    </div>
-
-    <div class="cover-footer">
-      <span>Student: ______________________</span>
-      <span>Project: ______________________</span>
-      <span>Date: ______________________</span>
+    <div>
+      <div class="field-group"><label class="field-label">Student / Designer</label><input class="field" type="text" placeholder="Your name"></div>
+      <div class="field-group"><label class="field-label">Course / Studio</label><input class="field" type="text" placeholder="Which class is this for?"></div>
+      <div class="field-group"><label class="field-label">Due Date</label><input class="field" type="text" placeholder="DD · MM · YYYY"></div>
     </div>
   </div>
+  <div class="field-group"><label class="field-label">In one sentence — what must this system make someone feel?</label><input class="field" id="p2feel" type="text" value="Like stepping into a calm, cozy creative space — a studio at golden morning light."></div>
+  <div class="field-group"><label class="field-label">Primary audience</label><input class="field" id="p2audience" type="text" value="Anyone encountering my portfolio — the system should feel personal, warm, and intentional"></div>
+  <div class="field-group"><label class="field-label">What this system must NEVER feel like</label><input class="field" id="p2never" type="text" value="Clinical, cold, generic, over-engineered, or like a UI framework. Never harsh, never purely efficient."></div>
+  <div class="field-group"><label class="field-label">The single most important visual idea</label><input class="field" id="p2idea" type="text" value="A curated corkboard: clustered, layered, breathing — organized but flowy, structured but handmade."></div>
+  <div class="h-rule"></div>
+  <div class="section-label mb-2" id="p2goalsLabel">Emotional goals — the four words this system lives by</div>
+  <div class="goal-grid">
+    <div class="panel goal-panel"><div class="section-title goal-title" id="word1">Calm</div></div>
+    <div class="panel goal-panel"><div class="section-title goal-title" id="word2">Thoughtful</div></div>
+    <div class="panel goal-panel"><div class="section-title goal-title" id="word3">Warm</div></div>
+    <div class="panel goal-panel"><div class="section-title goal-title" id="word4">Comforting</div></div>
+  </div>
+</div>
 
-  <!-- PAGE 2 — PROJECT IDENTITY -->
-  <div class="page">
-    <div class="page-header page-header-blush">
-      <div class="page-header-fade"></div>
-      <div class="page-header-inner">
-        <span class="page-header-kicker">✿ personal visual system · graphic design final project ✿</span>
-        <span class="page-header-page blush-text">02 / Project Identity</span>
-      </div>
+<div class="page">
+  <div class="page-meta"><span class="project-name">Visual System Template</span><span>03 / Colour System</span></div>
+  <div class="section-label">§ 02</div>
+  <div class="section-title" id="p3title">Colour<br>System</div>
+  <div class="section-intro" id="p3intro">Five colours, five moods. Nothing reaches full saturation — every colour stays soft enough to feel like morning.</div>
+  <div class="h-rule heavy"></div>
+  <div class="section-label mb-15 mt-2" id="p3primaryLabel">Primary palette — Cream and Pressed Flower</div>
+  <div class="color-grid" id="primaryColors"></div>
+  <div class="section-label mb-2" id="p3secondaryLabel">Secondary + accent palette</div>
+  <div class="color-grid" id="secondaryColors"></div>
+  <div class="h-rule"></div>
+  <div class="two-col mt-2">
+    <div>
+      <div class="field-group"><label class="field-label" id="lbl_c1">Field — dominant surface</label><input class="field" id="col1" type="text" value="#F7F2E9 — warm ivory, old book paper."></div>
+      <div class="field-group"><label class="field-label" id="lbl_c2">Blush — primary accent</label><input class="field" id="col2" type="text" value="#D4A5A0 — dusty rose. Borders, motifs, panel washes."></div>
+      <div class="field-group"><label class="field-label" id="lbl_c3">Sage — botanical contrast</label><input class="field" id="col3" type="text" value="#9DAF98 — muted grey-green. Prevents blurring."></div>
     </div>
-
-    <div class="section-tag-wrap"><span class="section-tag tag-blush">§ 01</span></div>
-    <div class="section-title">Project<br />Identity</div>
-    <div class="section-intro">
-      This is a personal visual system for a graphic design portfolio —
-      not a UI framework. It exists to support atmosphere and storytelling.
-      The system should feel calm, thoughtful, and welcoming. Every decision
-      here serves a feeling first, efficiency second.
-    </div>
-
-    <div class="h-rule heavy"></div>
-
-    <div class="two-col section-gap">
-      <div class="tint-box tint-blush top-border-blush">
-        <div class="field-group">
-          <label class="field-label">Project Name</label>
-          <input class="field" type="text" placeholder="Your system's name" />
-        </div>
-        <div class="field-group">
-          <label class="field-label">Deliverable Type</label>
-          <input class="field" type="text" value="Personal Visual System — Digital Portfolio" />
-        </div>
-        <div class="field-group">
-          <label class="field-label">Medium / Context</label>
-          <input class="field" type="text" value="Digital — Portfolio Website" />
-        </div>
-      </div>
-
-      <div class="tint-box tint-blue top-border-blue">
-        <div class="field-group">
-          <label class="field-label">Student / Designer</label>
-          <input class="field" type="text" placeholder="Your name" />
-        </div>
-        <div class="field-group">
-          <label class="field-label">Course / Studio</label>
-          <input class="field" type="text" placeholder="Which class is this for?" />
-        </div>
-        <div class="field-group">
-          <label class="field-label">Due Date</label>
-          <input class="field" type="text" placeholder="DD · MM · YYYY" />
-        </div>
-      </div>
-    </div>
-
-    <div class="callout callout-butter">
-      <label class="field-label butter-text">In one sentence — what must this system make someone feel?</label>
-      <input class="field" type="text" value="Like stepping into a calm, cozy creative space — a studio at golden morning light." />
-    </div>
-
-    <div class="callout callout-sage">
-      <label class="field-label sage-text">Primary audience</label>
-      <input class="field" type="text" value="Anyone encountering my portfolio — the system should feel personal, warm, and intentional" />
-    </div>
-
-    <div class="callout callout-lavender">
-      <label class="field-label lavender-text">What this system must NEVER feel like</label>
-      <input class="field" type="text" value="Clinical, cold, generic, over-engineered, or like a UI framework. Never harsh, never purely efficient." />
-    </div>
-
-    <div class="callout callout-blush">
-      <label class="field-label blush-text">The single most important visual idea</label>
-      <input class="field" type="text" value="A curated corkboard: clustered, layered, breathing — organized but flowy, structured but handmade." />
-    </div>
-
-    <div class="section-label section-space-sm">Emotional goals — the four words this system lives by</div>
-    <div class="emotion-grid">
-      <div class="emotion-tape"></div>
-
-      <div class="emotion-card emotion-card-blush">
-        <div class="emotion-word">Calm</div>
-        <div class="emotion-note blush-text">stillness · breath · pause</div>
-      </div>
-
-      <div class="emotion-card emotion-card-sage">
-        <div class="emotion-word">Thoughtful</div>
-        <div class="emotion-note sage-text">intention · care · craft</div>
-      </div>
-
-      <div class="emotion-card emotion-card-butter">
-        <div class="emotion-word">Warm</div>
-        <div class="emotion-note butter-text">light · morning · honey</div>
-      </div>
-
-      <div class="emotion-card emotion-card-blue">
-        <div class="emotion-word">Comforting</div>
-        <div class="emotion-note blue-text">cozy · soft · home</div>
-      </div>
+    <div>
+      <div class="field-group"><label class="field-label" id="lbl_c4">Warm Brown — ink</label><input class="field" id="col4" type="text" value="#4A3728 — all text. Never pure black."></div>
+      <div class="field-group"><label class="field-label" id="lbl_c5">Dusty Blue — unexpected note</label><input class="field" id="col5" type="text" value="#92ADC1 — from your moodboard's night skies."></div>
+      <div class="field-group"><label class="field-label" id="lbl_c6">Colour rule</label><input class="field" id="col6" type="text" value="Nothing reaches full saturation. Every colour stays soft enough to feel like morning, not noon."></div>
     </div>
   </div>
+  <div class="field-group"><label class="field-label" id="lbl_csrc">Colour source</label><input class="field" id="colsrc" type="text" value="Pressed flowers in an old journal. Warm light through linen curtains. A studio desk at 8am."></div>
+</div>
 
-  <!-- PAGE 3 — COLOUR SYSTEM -->
-  <div class="page">
-    <div class="page-header page-header-sage">
-      <div class="page-header-inner">
-        <span class="page-header-kicker">✿ pressed flowers in an old journal ✿</span>
-        <span class="page-header-page sage-text">03 / Colour System</span>
-      </div>
-    </div>
+<div class="page">
+  <div class="page-meta"><span class="project-name">Visual System Template</span><span>04 / Typography</span></div>
+  <div class="section-label">§ 03</div>
+  <div class="section-title">Type<br>System</div>
+  <div class="section-intro" id="typeIntro">Four typefaces, four registers. Script for the big emotional moments. Handwriting for personal labels. Typewriter for texture. Serif for everything that needs to be read comfortably.</div>
+  <div class="h-rule heavy"></div>
+  <div id="typeSpecimens"></div>
+  <div class="field-group mt-2"><label class="field-label">Pairing rationale</label><input class="field" id="pairingRationale" type="text" value="All four share warmth and age. Script carries the voice. Shadows Into Light carries the personality. Special Elite carries the texture. Lora carries the story."></div>
+</div>
 
-    <div class="section-tag-wrap"><span class="section-tag tag-sage">§ 02</span></div>
-    <div class="section-title">Colour<br />System</div>
-    <div class="section-intro">
-      Five colours, five moods. Pressed-flower blush, botanical sage,
-      starry-night blue, golden butter, and warm brown ink. Nothing reaches
-      full saturation — every colour stays soft enough to feel like morning.
-    </div>
+<div class="page">
+  <div class="page-meta"><span class="project-name">Visual System Template</span><span>05 / Space + Grid</span></div>
+  <div class="section-label">§ 04</div>
+  <div class="section-title" id="p5title">Space +<br>Grid</div>
+  <div class="section-intro" id="p5intro">The layout system is built on clusters, not columns. Content groups into pinned moments. Breathing room is not wasted space. It is atmosphere.</div>
+  <div class="h-rule heavy"></div>
 
-    <div class="palette-ribbon">
-      <div class="palette-ribbon-pill ivory-pill">Ivory</div>
-      <div class="palette-ribbon-pill blush-pill">Blush</div>
-      <div class="palette-ribbon-pill sage-pill">Sage</div>
-      <div class="palette-ribbon-pill blue-pill">Blue</div>
-      <div class="palette-ribbon-pill brown-pill">Brown</div>
-      <div class="palette-ribbon-pill dust-pill">Dust</div>
-      <div class="palette-ribbon-pill butter-pill">Butter</div>
-      <div class="palette-ribbon-pill lavender-pill">Lav</div>
-      <div class="palette-ribbon-pill sky-pill">Sky</div>
-    </div>
-
-    <div class="section-tag-wrap"><div class="section-label">Primary palette — Cream and Pressed Flower</div></div>
-    <div class="color-grid" id="primaryColors"></div>
-
-    <div class="section-tag-wrap"><div class="section-label">Secondary + accent palette</div></div>
-    <div class="color-grid" id="secondaryColors"></div>
-
-    <div class="h-rule heavy"></div>
-
-    <div class="two-col section-gap-sm">
+  <div class="section-stack">
+    <div class="section-label mb-2">Spacing Scale</div>
+    <div class="two-col gap-3">
       <div>
-        <div class="callout callout-blush">
-          <label class="field-label blush-text">Field — dominant surface</label>
-          <input class="field" type="text" value="#F7F2E9 — warm ivory, old book paper." />
-        </div>
-        <div class="callout callout-blush">
-          <label class="field-label blush-text">Blush — primary accent</label>
-          <input class="field" type="text" value="#D4A5A0 — dusty rose. Borders, motifs, washes." />
-        </div>
-        <div class="callout callout-sage">
-          <label class="field-label sage-text">Sage — botanical contrast</label>
-          <input class="field" type="text" value="#9DAF98 — muted grey-green. Prevents blurring." />
-        </div>
+        <div class="spacing-row"><span class="spacing-label">XS</span><div class="spacing-bar-wrap"><div class="spacing-bar bar-xs"></div></div><input class="spacing-input" type="text" value="4px"></div>
+        <div class="spacing-row"><span class="spacing-label">SM</span><div class="spacing-bar-wrap"><div class="spacing-bar bar-sm"></div></div><input class="spacing-input" type="text" value="8px"></div>
+        <div class="spacing-row"><span class="spacing-label">MD</span><div class="spacing-bar-wrap"><div class="spacing-bar bar-md"></div></div><input class="spacing-input" type="text" value="16px"></div>
       </div>
-
       <div>
-        <div class="callout callout-brown">
-          <label class="field-label brown-text">Warm Brown — ink</label>
-          <input class="field" type="text" value="#4A3728 — all text. Never pure black." />
-        </div>
-        <div class="callout callout-blue">
-          <label class="field-label blue-text">Dusty Blue — unexpected note</label>
-          <input class="field" type="text" value="#92ADC1 — from your moodboard's night skies." />
-        </div>
-        <div class="callout callout-butter">
-          <label class="field-label butter-text">Colour rule</label>
-          <input class="field" type="text" value="Nothing reaches full saturation. Every colour stays soft enough to feel like morning, not noon." />
-        </div>
+        <div class="spacing-row"><span class="spacing-label">LG</span><div class="spacing-bar-wrap"><div class="spacing-bar bar-lg"></div></div><input class="spacing-input" type="text" value="40px"></div>
+        <div class="spacing-row"><span class="spacing-label">XL</span><div class="spacing-bar-wrap"><div class="spacing-bar bar-xl"></div></div><input class="spacing-input" type="text" value="80px"></div>
+        <div class="spacing-row"><span class="spacing-label">2XL</span><div class="spacing-bar-wrap"><div class="spacing-bar bar-2xl"></div></div><input class="spacing-input" type="text" value="128px"></div>
       </div>
     </div>
-
-    <div class="callout callout-lavender">
-      <label class="field-label lavender-text">Colour source — what world does this palette evoke?</label>
-      <input class="field" type="text" value="Pressed flowers in an old journal. Warm light through linen curtains. A studio desk at 8am." />
-    </div>
+    <div class="mt-2"><label class="field-label">Base unit</label><input class="field" id="p5base" type="text" value="8px base. Between clusters: always LG+. Breathing room is atmosphere."></div>
   </div>
 
-  <!-- PAGE 4 — TYPOGRAPHY -->
-  <div class="page">
-    <div class="page-header page-header-blue">
-      <div class="page-header-inner">
-        <span class="page-header-kicker">✿ words that feel like handwriting ✿</span>
-        <span class="page-header-page blue-text">04 / Typography</span>
+  <div class="h-rule"></div>
+
+  <div class="mt-2">
+    <div class="section-label mb-2">Layout Structure</div>
+    <div class="grid-diagram">
+      <div class="grid-preview" id="gridPreview"></div>
+      <div class="grid-fields-two">
+        <div><label class="field-label">Columns</label><input class="field" type="text" value="12 col quiet grid"></div>
+        <div><label class="field-label">Content width</label><input class="field" type="text" value="680–720px max"></div>
+        <div><label class="field-label">Margins</label><input class="field" type="text" value="Wide — generous field"></div>
+        <div><label class="field-label">Cluster gap</label><input class="field" type="text" value="80px minimum"></div>
       </div>
     </div>
+    <div class="field-group mt-2"><label class="field-label">Layout type</label><input class="field" id="p5layout" type="text" value="Cluster-based. Content groups as pinned moments. Elements mostly align to grid but can drift slightly for warmth."></div>
+    <div class="field-group"><label class="field-label">The one layout rule</label><input class="field" id="p5rule" type="text" value="Every page has one moment of rest and one of focus. One quiet, one present. Never more than one focal point per page."></div>
+  </div>
+</div>
 
-    <div class="section-tag-wrap"><span class="section-tag tag-blue">§ 03</span></div>
-    <div class="section-title">Type<br />System</div>
-    <div class="section-intro">
-      Four typefaces, four registers. Script for the big emotional moments.
-      Handwriting for personal labels. Typewriter for texture and structure.
-      Serif for everything that needs to be read comfortably.
-    </div>
+<div class="page">
+  <div class="page-meta"><span class="project-name">Visual System Template</span><span>06 / Voice + Tone</span></div>
+  <div class="section-label">§ 05</div>
+  <div class="section-title" id="p6title">Voice +<br>Tone</div>
+  <div class="section-intro" id="p6intro">Design should feel calm, thoughtful, and welcoming. This system supports atmosphere and storytelling — not just efficiency. The personality here is specific: a cozy creative space, not a corporate one.</div>
+  <div class="h-rule heavy"></div>
 
-    <div class="h-rule heavy"></div>
+  <div class="section-label mb-15 mt-2">Tone spectrum — click to select</div>
+  <div class="tone-band" id="toneBand">
+    <div class="tone-cell" data-label="Clinical"></div>
+    <div class="tone-cell" data-label="Refined"></div>
+    <div class="tone-cell" data-label="Warm"></div>
+    <div class="tone-cell selected" data-label="Playful"></div>
+    <div class="tone-cell" data-label="Botanical"></div>
+    <div class="tone-cell" data-label="Dreamy"></div>
+    <div class="tone-cell" data-label="Cozy"></div>
+  </div>
+  <div id="toneLabel" class="tone-label-text">Playful — energetic, unexpected, a little delightful.</div>
 
-    <div class="type-card type-card-blush">
-      <div class="type-tape tape-blush"></div>
-      <div class="type-kicker blush-text">Display — Big Headlines</div>
-      <div class="type-display script-display">A cozy morning in the studio</div>
-      <div class="type-description">
-        Your name, page titles, the big emotional moments. Used sparingly — when it appears, it means something.
-      </div>
-      <div class="type-fields">
-        <div><label class="field-label">Typeface</label><input class="field" type="text" value="Pinyon Script" /></div>
-        <div><label class="field-label">Role</label><input class="field" type="text" value="Display headlines, key titles" /></div>
-        <div><label class="field-label">Size range</label><input class="field" type="text" value="36–72px — let it breathe" /></div>
-      </div>
-    </div>
+  <div class="section-label mb-2">Personality axes</div>
+  <div class="voice-row"><div class="voice-pole">Minimal</div><input class="voice-slider" type="range" min="0" max="100" value="30"><div class="voice-pole right">Maximal</div></div>
+  <div class="voice-row"><div class="voice-pole">Serious</div><input class="voice-slider" type="range" min="0" max="100" value="35"><div class="voice-pole right">Playful</div></div>
+  <div class="voice-row"><div class="voice-pole">Classical</div><input class="voice-slider" type="range" min="0" max="100" value="60"><div class="voice-pole right">Experimental</div></div>
+  <div class="voice-row"><div class="voice-pole">Cold</div><input class="voice-slider" type="range" min="0" max="100" value="75"><div class="voice-pole right">Warm</div></div>
+  <div class="voice-row"><div class="voice-pole">Static</div><input class="voice-slider" type="range" min="0" max="100" value="40"><div class="voice-pole right">Kinetic</div></div>
 
-    <div class="type-card type-card-blue">
-      <div class="type-tape tape-blue"></div>
-      <div class="type-kicker blue-text">Accent — Personal Moments</div>
-      <div class="type-display hand-display">a note, a label, a small thought ✿</div>
-      <div class="type-description">
-        Labels, captions, ribbon text, small annotations. Feels like your own handwriting on the page.
-      </div>
-      <div class="type-fields">
-        <div><label class="field-label">Typeface</label><input class="field" type="text" value="Shadows Into Light" /></div>
-        <div><label class="field-label">Role</label><input class="field" type="text" value="Labels, captions, ribbon text" /></div>
-        <div><label class="field-label">Size range</label><input class="field" type="text" value="11–18px — warm and casual" /></div>
-      </div>
-    </div>
+  <div class="h-rule mt-2"></div>
+  <div class="section-label mt-2 mb-2">In words — the system's personality</div>
+  <div class="note-row"><span class="note-num">01.</span><input class="note-field" id="voice1" type="text" value="This system sounds like a handwritten note tucked inside a book you love."></div>
+  <div class="note-row"><span class="note-num">02.</span><input class="note-field" id="voice2" type="text" value="It would never speak like a tech product, a corporate brand, or anything clinical or cold."></div>
+  <div class="note-row"><span class="note-num">03.</span><input class="note-field" id="voice3" type="text" value="If this system were a person, they would be thoughtful, quiet, and surrounded by beautiful small things."></div>
+  <div class="note-row"><span class="note-num">04.</span><input class="note-field" id="voice4" type="text" placeholder="The metaphor that guides what 'fits' this system is…"></div>
+</div>
 
-    <div class="type-card type-card-sage">
-      <div class="type-tape tape-sage"></div>
-      <div class="type-kicker sage-text">Typewriter / Mid — Texture</div>
-      <div class="type-display typewriter-display">Section Title — Project Label — Caption</div>
-      <div class="type-description">
-        Worn, imperfect, textured. Section headers, ribbon labels, captions.
-      </div>
-      <div class="type-fields">
-        <div><label class="field-label">Typeface</label><input class="field" type="text" value="Special Elite" /></div>
-        <div><label class="field-label">Style notes</label><input class="field" type="text" value="Uppercase for labels, mixed for titles" /></div>
-        <div><label class="field-label">Role</label><input class="field" type="text" value="Section headers, ribbon labels" /></div>
-      </div>
-    </div>
+<div class="page">
+  <div class="page-meta"><span class="project-name">Visual System Template</span><span>07 / Reference Board</span></div>
+  <div class="section-label">§ 06</div>
+  <div class="section-title" id="p7title">Reference<br>Board</div>
+  <div class="section-intro" id="p7intro">Your mind is already a giant, messy moodboard. This page makes that thinking visible. Collect what moves you — but look for the feeling, not the specific element. Curation is a design decision.</div>
+  <div class="h-rule heavy"></div>
 
-    <div class="type-card type-card-butter">
-      <div class="type-tape tape-butter"></div>
-      <div class="type-kicker butter-text">Serif / Body — Readability</div>
-      <div class="type-display body-display">The system supports long reading. Rhythm, breath, warmth.</div>
-      <div class="type-description">
-        All running text, project descriptions, about page. Never competes with Script above it.
-      </div>
-      <div class="type-fields">
-        <div><label class="field-label">Typeface</label><input class="field" type="text" value="Lora" /></div>
-        <div><label class="field-label">Size / Leading</label><input class="field" type="text" value="16–18px / 1.7 line height" /></div>
-        <div><label class="field-label">Role</label><input class="field" type="text" value="All body copy, descriptions" /></div>
-      </div>
-    </div>
+  <div class="ref-grid mt-2" id="refGrid"></div>
+  <div class="h-rule"></div>
 
-    <div class="callout callout-lavender">
-      <label class="field-label lavender-text">Pairing rationale — why do these four belong together?</label>
-      <input class="field" type="text" value="All four share warmth and age. Script carries the voice. Shadows Into Light carries the personality. Special Elite carries the texture. Lora carries the story." />
-    </div>
+  <div class="section-label mt-2 mb-2" id="p7notesLabel">What these references share</div>
+  <div class="note-row"><span class="note-num">01.</span><input class="note-field" type="text" placeholder="The feeling they share — not the visual element, but the emotion or quality…"></div>
+  <div class="note-row"><span class="note-num">02.</span><input class="note-field" type="text" placeholder="What I'm borrowing (the feeling) and what I'm leaving behind (the specific form)…"></div>
+  <div class="note-row"><span class="note-num">03.</span><input class="note-field" type="text" placeholder="The metaphor that connects them — what filter guided my search?"></div>
+</div>
+
+<div class="page">
+  <div class="page-meta"><span class="project-name">Visual System Template</span><span>08 / Rules + Constraints</span></div>
+  <div class="section-label">§ 07</div>
+  <div class="section-title" id="p8title">Rules +<br>Constraints</div>
+  <div class="section-intro" id="p8intro">These are the commitments that make this system behave like itself — even when you're not in the room. Every rule here serves the feeling.</div>
+  <div class="h-rule heavy"></div>
+
+  <div class="motif-panel mt-2 mb-25">
+    <div class="section-label mb-2" id="motifLabel">Motif hierarchy — the decorative grammar</div>
+    <div class="note-row"><span class="note-num">01.</span><input class="note-field" id="motif1" type="text" value="Lace — dominant. Borders, panel edges, background texture, page framing."></div>
+    <div class="note-row"><span class="note-num">02.</span><input class="note-field" id="motif2" type="text" value="Ribbons — structural. Horizontal dividers, section labels, connectors."></div>
+    <div class="note-row"><span class="note-num">03.</span><input class="note-field" id="motif3" type="text" value="Flowers — accent. Appear at meaningful moments, not repeated continuously."></div>
+    <div class="note-row"><span class="note-num">04.</span><input class="note-field" id="motif4" type="text" value="Teacups — signature. Recurring personal mark. Appears with intention."></div>
+    <div class="note-row"><span class="note-num">05.</span><input class="note-field" id="motif5" type="text" value="Stars — punctuation. Tiny inline markers, end-of-section signals."></div>
   </div>
 
-  <!-- PAGE 5 — SPACE + GRID -->
-  <div class="page">
-    <div class="page-header page-header-butter">
-      <div class="page-header-inner">
-        <span class="page-header-kicker">✿ breathing room is atmosphere ✿</span>
-        <span class="page-header-page butter-text">05 / Space + Grid</span>
-      </div>
-    </div>
-
-    <div class="section-tag-wrap"><span class="section-tag tag-butter">§ 04</span></div>
-    <div class="section-title">Space +<br />Grid</div>
-    <div class="section-intro">
-      The layout system is built on clusters, not columns. Content groups
-      into pinned moments — an image, a caption, a decorative element —
-      sitting together as one unit. Breathing room is not wasted space. It is atmosphere.
-    </div>
-
-    <div class="h-rule heavy"></div>
-
-    <div class="two-col section-gap-sm">
-      <div>
-        <div class="section-label butter-text">Spacing Scale — generous by default</div>
-
-        <div class="spacing-row">
-          <span class="spacing-label butter-text">XS</span>
-          <div class="spacing-bar-wrap"><div class="spacing-bar spacing-xs"></div></div>
-          <input class="spacing-input" type="text" value="4px" />
-        </div>
-
-        <div class="spacing-row">
-          <span class="spacing-label butter-text">SM</span>
-          <div class="spacing-bar-wrap"><div class="spacing-bar spacing-sm"></div></div>
-          <input class="spacing-input" type="text" value="8px" />
-        </div>
-
-        <div class="spacing-row">
-          <span class="spacing-label butter-text">MD</span>
-          <div class="spacing-bar-wrap"><div class="spacing-bar spacing-md"></div></div>
-          <input class="spacing-input" type="text" value="16px" />
-        </div>
-
-        <div class="spacing-row">
-          <span class="spacing-label sage-text">LG</span>
-          <div class="spacing-bar-wrap"><div class="spacing-bar spacing-lg"></div></div>
-          <input class="spacing-input" type="text" value="40px" />
-        </div>
-
-        <div class="spacing-row">
-          <span class="spacing-label blue-text">XL</span>
-          <div class="spacing-bar-wrap"><div class="spacing-bar spacing-xl"></div></div>
-          <input class="spacing-input" type="text" value="80px" />
-        </div>
-
-        <div class="spacing-row">
-          <span class="spacing-label lavender-text">2XL</span>
-          <div class="spacing-bar-wrap"><div class="spacing-bar spacing-2xl"></div></div>
-          <input class="spacing-input" type="text" value="128px" />
-        </div>
-
-        <div class="callout callout-butter">
-          <label class="field-label butter-text">Base unit</label>
-          <input class="field" type="text" value="8px base. Between clusters: always LG or above. Breathing room is atmosphere." />
-        </div>
-      </div>
-
-      <div>
-        <div class="section-label sage-text">Layout Structure</div>
-        <div class="grid-diagram">
-          <div class="grid-preview" id="gridPreview"></div>
-          <div class="grid-fields">
-            <div><label class="field-label">Columns</label><input class="field" type="text" value="12 col quiet grid" /></div>
-            <div><label class="field-label">Content width</label><input class="field" type="text" value="680–720px max" /></div>
-            <div><label class="field-label">Margins</label><input class="field" type="text" value="Wide — generous field" /></div>
-            <div><label class="field-label">Cluster gap</label><input class="field" type="text" value="80px minimum" /></div>
-          </div>
-        </div>
-
-        <div class="callout callout-sage">
-          <label class="field-label sage-text">Layout type — the corkboard principle</label>
-          <input class="field" type="text" value="Cluster-based. Content groups as pinned moments. Elements mostly align to grid but can drift slightly for warmth." />
-        </div>
-
-        <div class="callout callout-blush">
-          <label class="field-label blush-text">The one layout rule that holds everything together</label>
-          <input class="field" type="text" value="Every page has one moment of rest and one of focus. One quiet, one present. Never more than one focal point per page." />
-        </div>
-      </div>
-    </div>
+  <div class="dark-panel mb-25">
+    <div class="section-label mb-1" id="alwaysLabel">Always — things this system does</div>
+    <div class="note-row"><span class="note-num">01.</span><input class="note-field" id="always1" type="text" value="Always use warm brown (#4A3728) for text — never pure black."></div>
+    <div class="note-row"><span class="note-num">02.</span><input class="note-field" id="always2" type="text" value="Always give content generous breathing room — LG spacing minimum between clusters."></div>
+    <div class="note-row"><span class="note-num">03.</span><input class="note-field" id="always3" type="text" value="Always keep one focal point per page. One quiet, one present."></div>
+    <div class="note-row"><span class="note-num">04.</span><input class="note-field" id="always4" type="text" placeholder="Always…"></div>
   </div>
 
-  <!-- PAGE 6 — VOICE + TONE -->
-  <div class="page">
-    <div class="page-header page-header-lavender">
-      <div class="page-header-inner">
-        <span class="page-header-kicker">✿ a handwritten note tucked inside a book ✿</span>
-        <span class="page-header-page lavender-text">06 / Voice + Tone</span>
-      </div>
-    </div>
-
-    <div class="section-tag-wrap"><span class="section-tag tag-lavender">§ 05</span></div>
-    <div class="section-title">Voice +<br />Tone</div>
-    <div class="section-intro">
-      Design should feel calm, thoughtful, and welcoming. This system
-      supports atmosphere and storytelling — not just efficiency. The
-      personality here is specific: a cozy creative space, not a corporate one.
-    </div>
-
-    <div class="h-rule heavy"></div>
-
-    <div class="section-space-sm">
-      <div class="section-label">Tone spectrum — click to select your mood</div>
-    </div>
-
-    <div class="tone-band" id="toneBand">
-      <div class="tone-cell" data-label="Clinical" style="background:#e8e4dc"></div>
-      <div class="tone-cell" data-label="Refined" style="background:#d4cfc6"></div>
-      <div class="tone-cell" data-label="Warm" style="background:#D4A5A0"></div>
-      <div class="tone-cell selected" data-label="Playful" style="background:#C5ABD2"></div>
-      <div class="tone-cell" data-label="Botanical" style="background:#9DAF98"></div>
-      <div class="tone-cell" data-label="Dreamy" style="background:#92ADC1"></div>
-      <div class="tone-cell" data-label="Cozy" style="background:#F4D281"></div>
-    </div>
-
-    <div id="toneLabel" class="tone-label">
-      Playful — energetic, unexpected, a little delightful.
-    </div>
-
-    <div class="section-label section-space-sm">Personality axes — drag to position</div>
-
-    <div class="slider-panel">
-      <div class="voice-row">
-        <div class="voice-pole">Minimal</div>
-        <input class="voice-slider" type="range" min="0" max="100" value="30" />
-        <div class="voice-pole right">Maximal</div>
-      </div>
-
-      <div class="voice-row">
-        <div class="voice-pole">Serious</div>
-        <input class="voice-slider" type="range" min="0" max="100" value="35" />
-        <div class="voice-pole right">Playful</div>
-      </div>
-
-      <div class="voice-row">
-        <div class="voice-pole">Classical</div>
-        <input class="voice-slider" type="range" min="0" max="100" value="60" />
-        <div class="voice-pole right">Experimental</div>
-      </div>
-
-      <div class="voice-row">
-        <div class="voice-pole">Cold</div>
-        <input class="voice-slider" type="range" min="0" max="100" value="75" />
-        <div class="voice-pole right">Warm</div>
-      </div>
-
-      <div class="voice-row">
-        <div class="voice-pole">Static</div>
-        <input class="voice-slider" type="range" min="0" max="100" value="40" />
-        <div class="voice-pole right">Kinetic</div>
-      </div>
-    </div>
-
-    <div class="h-rule"></div>
-
-    <div class="section-space-sm">
-      <div class="section-label">In words — the system's personality</div>
-
-      <div class="numbered-note">
-        <span class="note-num blush-text">01.</span>
-        <input class="note-field" type="text" value="This system sounds like a handwritten note tucked inside a book you love." />
-      </div>
-
-      <div class="numbered-note">
-        <span class="note-num sage-text">02.</span>
-        <input class="note-field" type="text" value="It would never speak like a tech product, a corporate brand, or anything clinical or cold." />
-      </div>
-
-      <div class="numbered-note">
-        <span class="note-num blue-text">03.</span>
-        <input class="note-field" type="text" value="If this system were a person, they would be thoughtful, quiet, and surrounded by beautiful small things." />
-      </div>
-
-      <div class="numbered-note">
-        <span class="note-num lavender-text">04.</span>
-        <input class="note-field" type="text" placeholder="The metaphor that guides what 'fits' this system is…" />
-      </div>
-    </div>
+  <div class="never-panel">
+    <div class="section-label mb-2" id="neverLabel">Never — things this system refuses to do</div>
+    <div class="note-row"><span class="note-num">01.</span><input class="note-field" id="never1" type="text" value="Never use pure black, cool greys, or full-saturation colour."></div>
+    <div class="note-row"><span class="note-num">02.</span><input class="note-field" id="never2" type="text" value="Never scatter motifs without intention. Decoration without grammar becomes noise."></div>
+    <div class="note-row"><span class="note-num">03.</span><input class="note-field" id="never3" type="text" value="Never feel clinical, efficient, or like a UI framework."></div>
   </div>
 
-  <!-- PAGE 7 — REFERENCE BOARD -->
-  <div class="page">
-    <div class="page-header page-header-petal">
-      <div class="page-header-inner">
-        <span class="page-header-kicker">✿ your mind is already a moodboard ✿</span>
-        <span class="page-header-page petal-text">07 / Reference Board</span>
-      </div>
-    </div>
-
-    <div class="section-tag-wrap"><span class="section-tag tag-petal">§ 06</span></div>
-    <div class="section-title">Reference<br />Board</div>
-    <div class="section-intro">
-      Your mind is already a giant, messy moodboard. This page makes that
-      thinking visible. Collect what moves you — but look for the feeling,
-      not the specific element. Curation is a design decision.
-    </div>
-
-    <div class="h-rule heavy"></div>
-
-    <div class="ref-grid section-gap-sm" id="refGrid"></div>
-
-    <div class="h-rule"></div>
-
-    <div class="section-space-sm">
-      <div class="section-label">What these references share — curation turns intuition into structure</div>
-
-      <div class="numbered-note">
-        <span class="note-num petal-text">01.</span>
-        <input class="note-field" type="text" placeholder="The feeling they share — not the visual element, but the emotion or quality…" />
-      </div>
-
-      <div class="numbered-note">
-        <span class="note-num blush-text">02.</span>
-        <input class="note-field" type="text" placeholder="What I'm borrowing (the feeling) and what I'm leaving behind (the specific form)…" />
-      </div>
-
-      <div class="numbered-note">
-        <span class="note-num sage-text">03.</span>
-        <input class="note-field" type="text" placeholder="The metaphor that connects them — cloud, garden, snail, archive… what filter guided my search?" />
-      </div>
-    </div>
+  <div class="core-rule-panel">
+    <div class="section-label mb-2" id="coreLabel">The one rule that holds everything together</div>
+    <textarea class="field core-rule-text" id="coreRule" rows="2">Every decision serves the feeling first. The feeling is: calm, thoughtful, warm, comforting — a cozy creative space at golden morning light.</textarea>
   </div>
 
-  <!-- PAGE 8 — RULES + CONSTRAINTS -->
-  <div class="page">
-    <div class="page-header page-header-brown">
-      <div class="page-header-inner">
-        <span class="page-header-kicker light-kicker">✿ constraints protect the atmosphere ✿</span>
-        <span class="page-header-page petal-text">08 / Rules + Constraints</span>
-      </div>
-    </div>
-
-    <div class="section-tag-wrap"><span class="section-tag tag-brown">§ 07</span></div>
-    <div class="section-title">Rules +<br />Constraints</div>
-    <div class="section-intro">
-      These are the commitments that make this system behave like itself —
-      even when you're not in the room. Every rule here serves the feeling.
-    </div>
-
-    <div class="h-rule heavy"></div>
-
-    <div class="motif-panel section-gap-sm">
-      <div class="section-label">Motif hierarchy — the decorative grammar</div>
-      <div class="motif-intro">
-        Active elements. Not scattered — each has a role and stays in it.
-      </div>
-
-      <div class="numbered-note"><span class="note-num dust-text">01.</span><input class="note-field" type="text" value="Lace — dominant. Borders, panel edges, background texture, page framing. The system's primary frame language." /></div>
-      <div class="numbered-note"><span class="note-num blush-text">02.</span><input class="note-field" type="text" value="Ribbons — structural. Horizontal dividers, section labels, connectors. Can carry a label in Special Elite." /></div>
-      <div class="numbered-note"><span class="note-num sage-text">03.</span><input class="note-field" type="text" value="Flowers — accent. Appear at meaningful moments. A single bloom near a featured project, not repeated continuously." /></div>
-      <div class="numbered-note"><span class="note-num petal-text">04.</span><input class="note-field" type="text" value="Teacups — signature. Recurring personal mark. Appears with intention — enough to feel like mine, never wallpaper." /></div>
-      <div class="numbered-note"><span class="note-num blue-text">05.</span><input class="note-field" type="text" value="Stars — punctuation. Tiny inline markers, end-of-section signals, typographic ornaments. The smallest and most abstract." /></div>
-    </div>
-
-    <div class="constraint-block">
-      <div class="section-label constraint-title">Always — things this system does</div>
-      <div class="constraint-text">
-        These commitments protect the atmosphere. The visual habits that make this system recognisably mine.
-      </div>
-      <div class="numbered-note"><span class="note-num blush-text">01.</span><input class="note-field constraint-field" type="text" value="Always use warm brown (#4A3728) for text — never pure black. Harshness breaks the morning light feeling." /></div>
-      <div class="numbered-note"><span class="note-num sage-text">02.</span><input class="note-field constraint-field" type="text" value="Always give content generous breathing room — LG spacing minimum between clusters. Rest is atmosphere." /></div>
-      <div class="numbered-note"><span class="note-num sky-text">03.</span><input class="note-field constraint-field" type="text" value="Always keep one focal point per page. One moment of rest, one moment of focus. Never compete with yourself." /></div>
-      <div class="numbered-note"><span class="note-num butter-text">04.</span><input class="note-field constraint-field" type="text" placeholder="Always…" /></div>
-    </div>
-
-    <div class="callout callout-blush">
-      <div class="section-label blush-text">Never — things this system refuses to do</div>
-      <div class="numbered-note"><span class="note-num blush-text">01.</span><input class="note-field" type="text" value="Never use pure black, cool greys, or full-saturation colour. This system lives in soft morning light." /></div>
-      <div class="numbered-note"><span class="note-num blush-text">02.</span><input class="note-field" type="text" value="Never scatter motifs without intention. Each one has a role. Decoration without grammar becomes noise." /></div>
-      <div class="numbered-note"><span class="note-num blush-text">03.</span><input class="note-field" type="text" value="Never feel clinical, efficient, or like a UI framework. This system supports atmosphere — not just information." /></div>
-    </div>
-
-    <div class="callout callout-butter">
-      <div class="section-label butter-text">The one rule that holds everything together</div>
-      <textarea class="field textarea-field">Every decision serves the feeling first. The feeling is: calm, thoughtful, warm, comforting — a cozy creative space at golden morning light.</textarea>
-    </div>
-
-    <div class="footer-meta">
-      <div class="footer-quote">
-        "AI generates structure, human generates reasoning."
-      </div>
-      <div class="footer-version">
-        Version <input type="text" class="inline-footer-input" placeholder="1.0" /><br />
-        <span class="footer-date-row">Date <input type="text" class="inline-footer-input date-input" placeholder="DD · MM · YYYY" /></span>
-      </div>
+  <div class="h-rule closing-row">
+    <div class="section-intro closing-quote" id="closingQuote">"AI generates structure, human generates reasoning."</div>
+    <div class="field-label text-right">
+      Version <input type="text" class="inline-input inline-input-version" placeholder="1.0"><br>
+      <span class="date-line">Date <input type="text" class="inline-input inline-input-shortdate" placeholder="DD · MM · YYYY"></span>
     </div>
   </div>
+</div>
 
-  <script src="scripts/main.js"></script>
+<script src="scripts/main.js"></script>
 </body>
 </html>
